@@ -1,0 +1,46 @@
+.con{
+	padding-right: 50px;
+	padding-left: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.hor{
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.hor > img{
+	margin-left:15px;
+	margin-right: 15px;
+}
+.hor > span{
+	font-size: 22px;
+}
+
+
+.co_fa{
+	margin-top:8px;
+}
+
+.title_3{
+	background: url(../img/bg4.jpg) no-repeat;
+	width: 160px;
+	height: 50px;
+	line-height: 29px;
+	padding-left: 20px;
+	color: #ffffff;
+}
+
+.t14{
+	font-size: 22px;
+}
+
+.tb{
+	font-weight: bold;
+}
+.title_4{
+	background:url(../img/bg5.jpg) repeat-x bottom
+}

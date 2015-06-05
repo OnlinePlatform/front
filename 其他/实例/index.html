@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>演示：CSS3响应式菜单</title>
+<meta name="viewport" content="width=320,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="http://www.helloweba.com/css/main.css" />
+<style type="text/css">
+body {
+	font: 90%/160% Arial, Helvetica, sans-serif;
+	color: #666;
+	width: 900px;
+	max-width: 96%;
+	margin: 0 auto;
+}
+h4{font-size:14px; line-height:30px}
+p{line-height:30px}
+/* nav */
+.nav {
+	position: relative;
+	margin: 20px 0;
+}
+.nav ul {
+	margin: 0;
+	padding: 0;
+}
+.nav li {
+	margin: 0 5px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+.nav a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #999;
+	line-height: 100%;
+}
+.nav a:hover {
+	color: #d0d0d0;
+}
+.nav .current a {
+	background: #999;
+	color: #fff;
+	border-radius: 5px;
+}
+
+/* right nav */
+.nav.right ul {
+	text-align: right;
+}
+
+/* center nav */
+.nav.center ul {
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.nav {
+		position: relative;
+		min-height: 40px;
+	}	
+	.nav ul {
+		width: 180px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: solid 1px #aaa;
+		background: #fff url(images/menu.png) no-repeat 10px 11px;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	}
+	.nav li {
+		display: none; /* hide all <li> items */
+		margin: 0;
+	}
+	.nav .current {
+		display: block; /* show only current <li> item */
+	}
+	.nav a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+	}
+	.nav .current a {
+		background: none;
+		color: #666;
+	}
+
+	/* on nav hover */
+	.nav ul:hover {
+		background-image: none;
+	}
+	.nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav ul:hover .current {
+		background: url(images/check.png) no-repeat 10px 7px;
+	}
+
+	/* right nav */
+	.nav.right ul {
+		left: auto;
+		right: 0;
+	}
+
+	/* center nav */
+	.nav.center ul {
+		left: 50%;
+		margin-left: -90px;
+	}
+	
+}
+</style>
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div id="header">
+   <div id="logo"><h1><a href="http://www.helloweba.com" title="返回helloweba首页">helloweba</a></h1></div>
+</div>
+<p>请缩小你的浏览器窗口或者使用手机浏览。</p>
+<h4>左对齐</h4>
+<nav class="nav">
+	<ul>
+		<li class="current"><a href="#">首页</a></li>
+		<li><a href="#">客户服务</a></li>
+		<li><a href="#">产品展示</a></li>
+		<li><a href="#">经典案例</a></li>
+		<li><a href="#">联系我们</a></li>
+	</ul>
+</nav>
+<p>Helloweba关注WEB前端开发领域知识和技术，致力于WEB前端技术的推广和应用，分享WEB开发中常见的WEB应用及WEB开发技术知识相关文章，现已发展成为一个独立的WEB技术博客。</p>
+<br/>
+<h4>右对齐</h4>
+<nav class="nav right">
+	<ul>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">客户服务</a></li>
+		<li><a href="#">产品展示</a></li>
+		<li><a href="#">经典案例</a></li>
+		<li class="current"><a href="#">联系我们</a></li>
+	</ul>
+</nav>
+<p>长期以来，hellwoeba.com本着“分享 • 务实”的精神，为广大WEB前端技术爱好者提供了许多当今实用性强、高质量的博文，大部分文章提供在线演示DEMO和源码下载服务，读者可以边看文章边演示，满意后可以随意下载源码后再研究。</p>
+<br/>
+<h4>居中对齐</h4>
+<nav class="nav center">
+	<ul>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">客户服务</a></li>
+		<li class="current"><a href="#">产品展示</a></li>
+		<li><a href="#">经典案例</a></li>
+		<li><a href="#">联系我们</a></li>
+	</ul>
+</nav>
+<p>Helloweba的文章内容来源大多是站长根据多年工作经验收集整理的，注重实用性、综合性和原创性，文章内容难易层次偏向中高级，适合WEB开发人员技能的提升，因此Helloweba的读者应该具备一定的WEB开发技术基础，包括前端技术，以及了解后台语言如PHP。Helloweba文章内容不会讲解WEB基础知识，如果读者还是WEB初学者，建议先通过其他方式打好基础然后再来阅读helloweba，相信会对读者有很大的提升。</p>
+
+
+   <br/>
+<br/>
+<div id="footer">
+    <p>Powered by helloweba.com  允许转载、修改和使用本站的DEMO，但请注明出处：<a href="http://www.helloweba.com">www.helloweba.com</a></p>
+</div>
+</body>
+</html>
