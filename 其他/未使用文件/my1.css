@@ -1,0 +1,272 @@
+
+
+
+
+
+
+body {
+	/*font: 90%/160% Arial, Helvetica, sans-serif;
+	/*color: #f0eded;*/
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+
+/*导航栏*/
+.navbar-wrapper{
+	position:absolute;
+	top: 0;
+	right:0;
+	left: 0;
+	z-index: 20;
+}
+.container{
+	width:100%;
+	height: 100px;
+	background-color: #424242;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.logo{
+	float: left;
+}
+
+.nav {
+	position: relative;
+	/*margin: 20px 0;*/
+}
+.nav ul {
+	margin: 0;
+	padding: 0;
+}
+.nav li {
+	/*margin: 0 5px 10px 0;*/
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	list-style: none;
+	display: inline-block;
+	
+	font-size: 16px;
+	
+}
+.nav a {
+	padding: 7px 12px;
+	text-decoration: none;
+	color: #fff;
+	line-height: 100%;
+}
+.nav.center ul {
+	text-align: center;
+}
+.nav .current a {
+	background: #00ccff;
+	color: #fff;
+	border-radius: 5px;
+}
+.nav a:hover {
+	padding:7px 12px;
+	background-color: #00ccff;
+	border-radius: 5px
+}
+.nav .current a {
+	background: #00ccff;
+	color: #fff;
+	border-radius: 5px;
+}
+.login{
+	float: right;
+	margin-top: 20px;
+}
+.login a:hover{
+	padding:7px 12px;
+	background-color: #939292;
+	border-radius: 5px
+}
+
+
+@media screen and (max-width: 600px) {
+	.nav {
+		position: relative;
+		min-height: 40px;
+	}	
+	.nav ul {
+		width: 180px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: solid 1px #aaa;
+		background: #fff url(images/menu.png) no-repeat 10px 11px;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	}
+	.nav li {
+		display: none; /* hide all <li> items */
+		margin: 0;
+	}
+	.nav .current {
+		display: block; /* show only current <li> item */
+	}
+	.nav a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+	}
+	.nav .current a {
+		background: none;
+		color: #666;
+	}
+
+	/* on nav hover */
+	.nav ul:hover {
+		background-image: none;
+	}
+	.nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav ul:hover .current {
+		background: url(images/check.png) no-repeat 10px 7px;
+	}
+
+	
+	/* center nav */
+	.nav.center ul {
+		left: 50%;
+		margin-left: -90px;
+	}
+	
+}
+
+
+
+/*轮播图*/
+.carousel{
+
+	right: 0px;
+	top: 100px;
+	width: 100%;
+	height: 580px;
+	z-index: 30;
+}
+
+    #slides2 {
+ 
+      display: none;
+     /* margin-bottom:50px;*/
+    }
+
+    .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    .slidesjs-previous {
+      margin-right: 5px;
+      float: left;
+    }
+
+    .slidesjs-next {
+      margin-right: 15px;
+      float: right;
+    }
+
+    .slidesjs-pagination {
+      margin: 6px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(image/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    a:hover,
+    a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+
+    
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+     /* body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }*/
+      .carousel {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .carousel {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .carousel {
+        width: auto
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .carousel {
+        width: auto
+      }
+    }
+
+
+
+.intro{
+	width: 100%;
+	height: 180px;
+}
+.tit{
+	text-align: center;
+	height: 60px;
+}
+.detail{
+	text-align: center;
+	left: 10%;
+	right:10%;
+	height: 120px;
+}
+.detail li{
+	display: inline;
+	width: 20%;
+}
