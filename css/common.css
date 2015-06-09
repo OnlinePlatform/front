@@ -139,6 +139,10 @@ ol li{
   right: 80px;
   border:1px solid #eee;
   background: white;
+  width: 85px;
+}
+.enter-position{
+  right: -20px;
 }
 .user-center ul {
   padding: 5px;
