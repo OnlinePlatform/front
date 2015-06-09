@@ -31,7 +31,7 @@
         </div> -->
         <div class="collapse navbar-collapse pull-left">
           <ul class="nav navbar-nav">
-            <li><a href="#" class="active">首页</a></li>
+            <li><a href="#">首页</a></li>
             <li><a href="#">教学实验</a></li>
             <li><a href="#">科研合作</a></li>
             <li><a href="#">就业实习</a></li>
@@ -87,8 +87,8 @@
                 <ol class="s-section">
                   <li>
                     <a href="#">SVN 服务器端的安装和配置</a>
-                    <a href="#" title="播放视频"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></a>
-                    <a href="#"  title="查看PPT"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+                    <a href="#video" data-toggle="modal" title="播放视频"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></a>
+                    <a href="file.html" target="_blank" title="查看PPT"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
                   </li>
                   <li>
                     <a href="#">SVN 服务器端的安装和配置</a>
@@ -158,7 +158,7 @@
               </div>
               <div class="col-sm-5 col-md-3">
                 <div class="thumbnail">
-                  <a href="#"><img src="img/subject.png" alt="课程"></a>
+                  <a href="#"><img src="img/subject.png"></a>
                   <div class="caption">
                     <a href="#"><h3>Python</h3></a>
                     <p>本课程主要讲解在不同系统（Window、Linux）中搭建Python开发环境，及Eclipse配置和 Python 文件类型。</p>
@@ -169,29 +169,21 @@
             </div>
             <div class="row hidden" id="s-part4">
               <div class="row">
-                <div class="col-sm-2">
-                  <div class="thumbnail img-board">
-                    <img src="img/user.png" alt="课程">
-                    <div class="caption">
-                      <p>Amy</p>
-                    </div>
-                  </div>
+                <div class="col-sm-1 center">
+                    <img src="img/user.png" alt="课程"  class="user-img">
+                    <p>Amy</p>
                 </div>
-                <div class="col-sm-9 board-content">
+                <div class="col-sm-11 board-content">
                   <p>你知道的太多了</p>
                   <a class="pull-right" data-toggle="modal" href="#response">回复</a>
                 </div> 
               </div>
               <div class="row">
-                <div class="col-sm-2">
-                  <div class="thumbnail img-board">
-                    <img src="img/user.png" alt="课程">
-                    <div class="caption">
-                      <p>Amy</p>
-                    </div>
-                  </div>
+                <div class="col-sm-1 center">
+                    <img src="img/user.png" alt="课程"  class="user-img">
+                    <p>Amy</p>
                 </div>
-                <div class="col-sm-9 board-content">
+                <div class="col-sm-11 board-content">
                   <p>你知道的太多了</p>
                   <a class="pull-right" data-toggle="modal" href="#response">回复</a>
                 </div> 
@@ -205,39 +197,61 @@
             </div>
           </div>
         </div>
-
+        <div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                      <h4 class="modal-title" id="myModalLabel">
+                             视频名称
+                      </h4>
+                    </div>
+                    <div class="modal-body">
+                      <video class='video-style' controls>
+                        <source src='abc.mp4' type="video/mp4">
+                        <source src='abc.ogv' type='video/ogg'>
+                        <p> 浏览器不支持该视频播放，请升级浏览器</p>
+                      </video>
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div> -->
+                  </div>
+                </div>
+        </div>
 
        <!--  右侧推送 -->
-        <div class="col-xs-6 col-sm-2 pull-right">
+        <div class="col-xs-6 col-sm-3 pull-right" style="padding: 10px;margin-top: -10px">
             <dl>
               <dt>授课老师</dt>
               <dd>
-                  <a href="#" class="figure"><img src="img/user.png" width="80px" height="80px">
+                  <a href="#" class="figure"><img src="img/user.png">
                   </a>
                   <a href="#">大山</a>
                   <p> Web前端工程师</p>
                   <br class="clear">
-                  <p>W3CPlus创始人，目前就职于手淘。对CSS3和Sass等前端脚本语言有深入的认识和丰富的实践经验。CSS3、Sass和Drupal中国布道者，2014年出版《图解CSS3：核心技术与案例实战》。
+                  <p class="indent" style="margin-top: 20px;">W3CPlus创始人，目前就职于手淘。对CSS3和Sass等前端脚本语言有深入的认识和丰富的实践经验。CSS3、Sass和Drupal中国布道者，2014年出版《图解CSS3：核心技术与案例实战》。
                   </p>
               </dd>
             </dl>
             <dl>
               <dt>课程须知</dt>
                 <dd>
-                <p>对CSS有一定的了解，才可以更好的学习本课程。</p>
+                <p class="indent">对CSS有一定的了解，才可以更好的学习本课程。</p>
               </dd>
             </dl>
             <dl>
               <dt>老师告诉你能学到什么？</dt>
-                  1、Sass是什么？他有什么功能？
-                  2、Sass需要什么样的环境才能顺利运行
-                  3、Sass语法格式和CSS有什么不一样？
-                  4、Sass要如何编译
-                  5、你要怎么调试Sass
-                  6、Sass有哪些基本特性
-                  7、Sass的控制命令能做些什么事情
-                  8、Sass有哪些数据类型
-                  9、Sass的函数功能
+                <dd>Sass是什么？他有什么功能？</dd>
+                <dd>Sass需要什么样的环境才能顺利运行</dd>
+                <dd>Sass语法格式和CSS有什么不一样？
+                <dd>Sass要如何编译
+                <dd>你要怎么调试Sass
+                
             </dl>
         </div>
       </div>
@@ -256,7 +270,6 @@
             </p>
         </div>
     </div>
-
   </div>
           <!-- response modal -->
   <div class="modal fade" id="response" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

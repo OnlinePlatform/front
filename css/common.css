@@ -4,13 +4,19 @@
 img{
 	width: 100%;
 }
+.user-img{
+  width: 50px;
+}
 html,body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 body {
-  padding-top: 70px;
+  padding-top: 50px;
 }
-
+.row {
+  margin-right:0px;
+  margin-left: 0px;
+}
 .footer {
     width: 100%;
     min-width: 1100px;
@@ -65,6 +71,7 @@ body {
 }
 .horizon{
 	border-bottom: 2px solid #A5A5A5;
+  margin-bottom: 10px;
 }
 .bg{
 	background-color: #eee;
@@ -111,3 +118,41 @@ ol li{
 	border-radius: 4px;
 /*	margin: 10px;
 */}
+.hint,dd a{
+  padding: 5px;
+  font-size: 14px;
+  color: #a5a5a5;
+  height: 22px;
+  line-height: 20px;
+  font-family: "Helvetica Neue","Microsoft Yahei",Helvetica,Arial,sans-serif;
+}
+/*首行缩进*/
+.indent{
+    text-align: justify; text-justify: inter-ideograph; text-indent: 2em;
+}
+.center{text-align: center;}
+/*用户中心*/
+.user-center{
+  padding: 0 10px 0 10px;
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  border:1px solid #eee;
+  background: white;
+}
+.user-center ul {
+  padding: 5px;
+  -webkit-padding-start: 0px;
+}
+
+.user-center ul li{
+  list-style: none;
+  padding-bottom: 5px;
+}
+.user-center ul li a{
+  text-decoration: none;
+  font-family:"Helvetica Neue","Microsoft Yahei",Helvetica,Arial,sans-serif;
+}
+.user-center ul li a:hover{
+    color: red;
+}

@@ -53,8 +53,15 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav pull-right">
-            <li><a href="#">注册</a></li>
-            <li><a href="#">登录</a></li>
+            <div id="user">
+                <img src="img/user.png" class="user-img">
+                <div class="user-center hidden">
+              <ul>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">退出</a></li>
+              </ul> 
+                </div>
+            </div>
           </ul>
         </div>
       </div>
@@ -222,7 +229,7 @@
 
 
        <!--  右侧推送 -->
-        <div class="col-xs-6 col-sm-2 pull-right">
+        <div class="col-xs-6 col-sm-3 pull-right" style="padding: 10px; margin-top: -10px;">
             <dl>
               <dt>最新课程</dt>
               <dd><a href="#">javascript高级程序设计</a></dd>
