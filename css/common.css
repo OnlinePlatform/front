@@ -8,7 +8,7 @@ html,body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 body {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 .footer {
