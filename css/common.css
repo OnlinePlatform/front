@@ -160,3 +160,9 @@ ol li{
 .user-center ul li a:hover{
     color: red;
 }
+.modal-header{
+  padding: 10px;
+}
+.modal-header h4{
+  text-align: center;
+}
