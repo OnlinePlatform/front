@@ -10,6 +10,28 @@ body {
 }
 
 
+.contain{
+		padding-right:15px;
+		padding-left:15px;
+		margin-right:auto;
+		margin-left:auto
+		}
+@media (min-width:768px){
+	.contain{
+		width:auto;
+	}
+}
+@media (min-width:992px){
+	.contain{
+		width:auto;
+	}
+}
+@media (min-width:1200px){
+	.contain{
+		width:auto;
+	}
+}
+
 
 /*导航栏
 .navbar-wrapper{
@@ -156,8 +178,8 @@ body {
 }
 
 .con{
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-right: 50px;
+	padding-left: 50px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -177,8 +199,8 @@ body {
 	padding-left: 15px;
 	padding-right: 15px;
 	background-color: #f6f9e7;
-	width: 330px;
-	height: 180px;
+	width: 380px;
+	height: 200px;
 	z-index: 5;
 }
 

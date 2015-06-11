@@ -1,8 +1,8 @@
 .con{
-	padding-right: 10px;
-	padding-left: 10px;
-	margin: 0 auto;
+
+	margin: 10px;
 	text-align: center;
+	border:1px double #e6e6e6;
 }
 
 .hor{
@@ -24,7 +24,7 @@
 }
 
 .title_3{
-	background: url(../img/bg4.jpg) no-repeat;
+	background: url(../img/bg4.png) no-repeat;
 	width: 130px;
 	height: 45px;
 	line-height: 29px;
@@ -40,7 +40,7 @@
 	font-weight: bold;
 }
 .title_4{
-	background:url(../img/bg5.jpg) repeat-x bottom
+	background:url(../img/bg5.png) repeat-x bottom
 }
 
 
@@ -56,7 +56,7 @@
 	border: 2px;
 	border-style: outset;
 	border-color: #e9e8e8;
-	background: url(../img/bg1.jpg) no-repeat;
+	background: url(../img/bg1.png) no-repeat;
 }
 
 .rowlist1 .tit01 .wz {
@@ -171,3 +171,13 @@
 	margin-bottom: 5px;
 }
 
+.demo{
+	width: 470px;
+	height: 280px;
+	text-align: left;
+	overflow:hidden;
+}
+.demo > ul > li{
+	padding-top: 5px;
+	padding-bottom:5px; 
+}
