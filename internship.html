@@ -59,7 +59,9 @@
 				      <div class="input-group-addon">类型</div>
 				      <input type="text" class="form-control" placeholder="输入职位或公司名称">
 				      <div class="input-group-addon">城市</div>
-				      <input type="text" class="form-control" placeholder="输入实习的城市">
+				      <input type="text" class="form-control" placeholder="输入实习的城市" id="city-chosen" list='city'>					
+				      <datalist id="city">
+				      </datalist>
 				    </div>
 				  </div>
 				  <button type="submit" class="btn btn-success">搜索</button>
@@ -182,5 +184,7 @@
     <script src="js/jquery-1.11.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/city.js"></script>
+
 </body>
 </html>
