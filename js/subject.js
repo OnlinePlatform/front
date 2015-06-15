@@ -1,7 +1,8 @@
+var urlpdf=window.location.search.slice(1);
 var fp = new FlexPaperViewer(  
 'FlexPaperViewer',    /* 对应FlexPaperViewer.swf文件*/  
 'viewerPlaceHolder', { config : {  
-SwfFile : "{E:/front/swf/1.swf}",
+SwfFile : urlpdf,
 Scale : 0.6,  
 ZoomTransition : 'easeOut',  
 ZoomTime : 0.5,  
