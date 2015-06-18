@@ -16,6 +16,7 @@
     <link href="css/individual_center.css" rel="stylesheet">
   </head>
   <script src="js/individual_center.js"></script>
+  <script src="js/city.js"></script>
   <body>
     <!--Navigator Start-->
     <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -150,48 +151,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4 col-md-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#"> <h4> Python </h4> </a>
-                    <p> 课程码：A1243 </p>
-                    <p> 任课教师：李晓华 </p>
-                    <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 col-md-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#"> <h4> Python </h4> </a>
-                    <p> 课程码：A1243 </p>
-                    <p> 任课教师：李晓华 </p>
-                    <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 col-md-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#"> <h4> Python </h4> </a>
-                    <p> 课程码：A1243 </p>
-                    <p> 任课教师：李晓华 </p>
-                    <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="hidden" id="s-part2">
-              <div class="col-sm-4 col-md-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#"> <h4> php </h4> </a>
-                    <p> 课程码：A1243 </p>
-                    <p> 任课教师：李晓华 </p>
-                    <p> <a href="#" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a> <label class="label label-danger"> 申请失败</label></p>
-                  </div>
-                </div>
-              </div>
               <div class="col-sm-4 col-md-3">
                 <div class="thumbnail">
                   <div class="caption">
@@ -244,7 +205,23 @@
             </ul>
           </div>
           <!--科研合作 Menu End-->
-          
+          <div class="modal fade" id="program_info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      项目详情
+                    </div>
+                    <div class="modal-body">
+                      本项目是有一大批985、211高校联合承办
+                    </div>
+                    <div class='modal-footer'>
+                      <a href='#' class='btn' data-dismiss='modal'>
+                        关闭
+                      </a>
+                    </div>
+                  </div>
+                </div>
+          </div>
         <div class="col-xs-12 col-sm-12">
           <!--已完成项目 Body Start-->
           <div id="my_program">
@@ -253,34 +230,7 @@
                 <div class="caption">
                   <a href="#"> <h4> 线上平台 </h4> </a>
                   <p> 一个综合学习、科研、就业的平台 </p>
-                  <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 线上平台 </h4> </a>
-                  <p> 一个综合学习、科研、就业的平台 </p>
-                  <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 线上平台 </h4> </a>
-                  <p> 一个综合学习、科研、就业的平台 </p>
-                  <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 线上平台 </h4> </a>
-                  <p> 一个综合学习、科研、就业的平台 </p>
-                  <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
+                  <p> <a href="#program_info" data-toggle="modal" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
                 </div>
               </div>
             </div>
@@ -289,33 +239,6 @@
 
           <!--进行中的项目 Body Start-->
           <div id="my_programing" class="hidden">
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 线上平台 </h4> </a>
-                  <p> 一个综合学习、科研、就业的平台 </p>
-                  <p> <a href="#" class="btn-sm btn-info" role="进入项目"> 进入项目 </a> </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 线上平台 </h4> </a>
-                  <p> 一个综合学习、科研、就业的平台 </p>
-                  <p> <a href="#" class="btn-sm btn-info" role="进入项目"> 进入项目 </a> </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 线上平台 </h4> </a>
-                  <p> 一个综合学习、科研、就业的平台 </p>
-                  <p> <a href="#" class="btn-sm btn-info" role="进入项目"> 进入项目 </a> </p>
-                </div>
-              </div>
-            </div>
             <div class="col-sm-4 col-md-3">
               <div class="thumbnail">
                 <div class="caption">
@@ -349,7 +272,7 @@
                   </div>
                   <a href="#"> <h4> 大数据 </h4> </a>
                   <p> 基于云平台的***分析</p>
-                  <p> <a href="#" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a> <label class="label label-danger"> 申请失败</label></p>
+                  <p> <a href="#program_info" data-toggle="modal" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a> <label class="label label-danger"> 申请失败</label></p>
                 </div>
               </div>
             </div>
@@ -358,7 +281,7 @@
                 <div class="caption">
                   <a href="#"> <h4> 大数据 </h4> </a>
                   <p> 基于云平台的***分析</p>
-                  <p> <a href="#" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a> <label class="label label-warning"> 正在审核 </label></p>
+                  <p> <a href="#program_info" data-toggle="modal" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a> <label class="label label-warning"> 正在审核 </label></p>
                 </div>
               </div>
             </div>
@@ -417,39 +340,6 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-3 col-sm-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>软件工程师</h4>
-                    </a>
-                    <p>安码科技有限公司</p>
-                    <p><a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-3 col-sm-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>软件工程师</h4>
-                    </a>
-                    <p>安码科技有限公司</p>
-                    <p><a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-3 col-sm-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>软件工程师</h4>
-                    </a>
-                    <p>安码科技有限公司</p>
-                    <p><a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a></p>
-                  </div>
-                </div>
-              </div>
             </div>
             <!--已完成的实习 End-->
 
@@ -472,17 +362,6 @@
                     </a>
                     <p>百度</p>
                     <p><a href="#" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a><label class="label label-danger">申请失败</label></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-3 col-sm-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>交互设计师</h4>
-                    </a>
-                    <p>阿里巴巴</p>
-                    <p><a href="#" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a><label class="label label-warning">正在审核</label></p>
                   </div>
                 </div>
               </div>
@@ -555,49 +434,7 @@
                     <p>
                       任课教师：西西
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 col-md-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>
-                        Python
-                      </h4>
-                    </a>
-                    <p>
-                      课程码：B0po9e4
-                    </p>
-                    <p>
-                      任课教师：西西
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 col-md-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>
-                        Python
-                      </h4>
-                    </a>
-                    <p>
-                      课程码：B0po9e4
-                    </p>
-                    <p>
-                      任课教师：西西
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 col-md-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#"> <h4> Python </h4> </a>
-                    <p> 课程码：B0po9e4 </p>
-                    <p> 任课教师：西西 </p>
+                    <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
                   </div>
                 </div>
               </div>
@@ -605,39 +442,6 @@
             <div class="hidden" id="opt_concern">
               <div class="col-xs-12 col-sm-12">
                 <div class="" id="opt_end">
-              <div class="col-xs-3 col-sm-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>软件工程师</h4>
-                    </a>
-                    <p>安码科技有限公司</p>
-                    <p><a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-3 col-sm-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>软件工程师</h4>
-                    </a>
-                    <p>安码科技有限公司</p>
-                    <p><a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-3 col-sm-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>软件工程师</h4>
-                    </a>
-                    <p>安码科技有限公司</p>
-                    <p><a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a></p>
-                  </div>
-                </div>
-              </div>
               <div class="col-xs-3 col-sm-3">
                 <div class="thumbnail">
                   <div class="caption">
