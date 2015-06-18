@@ -1,0 +1,13 @@
+.tshow_title{
+	padding-left: 20px;
+}
+.tshow_intro{
+	margin-top: 20px;
+	text-indent: 2em;
+    line-height: 2em;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#s-part1,#s-part2,#s-part3{
+	min-height: 400px;
+}

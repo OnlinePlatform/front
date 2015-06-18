@@ -1,0 +1,47 @@
+.s-title{
+  padding: 10px;
+}
+.s-title h3{
+  font-family: 微软雅黑;
+  text-align: center;
+}
+.figure {
+  float: left;
+  margin-right: 10px;
+  width: 80px;
+}
+
+.img-board img{
+  width: 100px;
+  margin: 20px auto;
+}
+.img-board .caption p{
+  text-align: center;
+}
+ .board-content{
+  padding: 10px;
+  border: 1px solid #eee;  
+ }
+ .input-board textarea{
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+ }
+#response .modal-body textarea{
+  width: 95%;
+  min-height: 100px;
+  border-radius: 4px;
+  border:1px solid #eee;
+ }
+/*#s-part4 img{
+  width: 60px;
+ }*/
+.modal-dialog {
+    width: 730px;
+  }
+ .video-style{
+    width: 700px;
+    height: 420px;
+ }

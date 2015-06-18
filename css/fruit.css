@@ -1,0 +1,11 @@
+.f-content{
+height: 90px;
+overflow: scroll-y;
+}
+.modal-body{
+	padding: 10px;
+}
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}

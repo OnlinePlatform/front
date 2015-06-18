@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--     <link rel="icon" href="../../favicon.ico">
+ --><title>公司</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <style type="text/css"> 
+    .sub-header {
+	    padding-bottom: 10px;
+	    border-bottom: 1px solid #EEE;
+	}
+	.glyphicon{
+		top: 5px;
+		color: red;
+		border: 1px;
+	}
+	.content-c{
+		padding: 10px;
+	}
+	.job-name{
+		color: white;
+		background:rgb(181, 230, 11);
+		padding: 10px;
+		cursor: pointer;
+	}
+	.sub-title{
+		font-family: 微软雅黑;
+  		font-size: 18px;
+	}
+	.resume{
+		  position: fixed;
+		  bottom: 30px;
+		  right: 150px;
+		  width: 150px;
+		  border: 1px #eee solid;
+		  height: 100px;
+		  background: #5CB85C;
+	}
+	.resume a,h4{
+		font-size: 18px;
+		display: block;
+		height: 34px;
+		text-decoration: none;
+		padding-bottom: 12px;
+		font-family: 微软雅黑;
+		color: white;
+		text-align: center;
+		border-bottom: 1px white solid;
+		cursor: pointer;
+	}
+	.resume .glyphicon{
+		text-align: center;
+		color: white;
+	}
+	.resume h5{
+		text-align: center;
+		color: red;
+		font-size: 18px;
+	}
+	.modal-header {
+	  	padding: 10px;
+	 	border-bottom: 1px solid #e5e5e5;
+	 	height: 41px;
+		background: #5CB85C;
+	 }
+	.input-group {
+		  margin-bottom: 10px;
+		}
+	.modal-dialog {
+  		width: 404px;
+  	}
+  	#resume {
+		margin: 300px 0 0 200px;
+	} /*投递简历对话框的位置*/
+    </style>
+  </head>
+<body>	
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+      <div class="collapse navbar-collapse pull-left">
+          <ul class="nav navbar-nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">教学实验</a></li>
+            <li><a href="#">科研合作</a></li>
+            <li><a href="#">就业实习</a></li>
+            <li><a href="#">关于我们</a></li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="#">注册</a></li>
+            <li><a href="#">登录</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      	<div class="row horizon">
+        	<h3><span class="glyphicon glyphicon-heart-empty" aria-hidden="true" id="collect-c"></span>	北京德钧咨询有限公司</h3>
+     	</div>
+      	<div class="row">
+	        <div class="col-xs-12 col-sm-9">
+	          <div>
+	            <div class="row">
+	            	<div class="col-xs-4 hint">
+	            		<p>发布时间：<span>2015-01-01</span></p>
+	            	</div>
+	            	<div class="col-xs-8 hint">
+	            		<p>标签：<span>咨询 协调 客户 会计 管理</span></p>
+	            	</div>
+	            </div>
+	            <div class="row panel panel-default">
+	            	<div class='content-c'>
+	            		<p class="sub-title">一、公司介绍</p>
+	            		<p class="indent">北京德钧咨询有限公司主要致力于为各类科技创新型企业提供科技咨询及项目申请服务，业务涵盖 “科技咨询、政府无偿资助基金申请、企业资质认定、投融资服务、管理咨询、企业培训”等多项领域。公司在企业科技项目咨询申报方面，具有多年服务经验，尤其在政府针对企业的相关扶持基金方面。公司通过深度挖掘企业的科技创新性，结合政府部门的基金政策，为各类企业争取到了政府的扶持基金，助力企业的科技研发，对企业发展起到非常积极的促进作用。</p>
+	            		<p class="sub-title">二、招聘职位</p>
+	            		<div>
+	            			<p class="job-name"><span class='glyphicon glyphicon-tag'></span> 基金申报专员</p>
+	            			<p>人数：<span>4-5人</span></p>
+	            			<p>职位描述：</p>
+	            			<ul>
+	            				<li>收集、整理各级政府课题（基金）申报资料信息，组织资料进行申报；</li>
+	            				<li>负责客户沟通项目实施、管理及维护任务；</li>
+	            				<li>完成项目任务，配合其它成员完成项目体系总体目标；</li>
+	            				<li>参与公司组织的内部和外部培训，进行业务知识和技巧的学习提升；</li>
+	            			</ul>
+	            			<p>职位要求：</p>
+	            			<ul>
+	            				<li>本科及以上学历，学习期间曾参与过课题（项目）研究者优先；</li>
+	            				<li>认真的工作态度及工作责任心，有一定的文字功底；</li>
+	            				<li>具较强的开拓精神，能够承担一定的工作压力，拥有独立谈判的能力；</li>
+	            				<li>不限专业</li>
+	            			</ul>
+	            		</div>
+	            		<div>
+	            			<p class="job-name"><span class='glyphicon glyphicon-tag'></span> 行政兼出纳</p>
+	            			<p>人数：<span>4-5人</span></p>
+	            			<p>职位描述：</p>
+	            			<ul>
+	            				<li>收集、整理各级政府课题（基金）申报资料信息，组织资料进行申报；</li>
+	            				<li>负责客户沟通项目实施、管理及维护任务；</li>
+	            				<li>完成项目任务，配合其它成员完成项目体系总体目标；</li>
+	            				<li>参与公司组织的内部和外部培训，进行业务知识和技巧的学习提升；</li>
+	            			</ul>
+	            			<p>职位要求：</p>
+	            			<ul>
+	            				<li>本科及以上学历，学习期间曾参与过课题（项目）研究者优先；</li>
+	            				<li>认真的工作态度及工作责任心，有一定的文字功底；</li>
+	            				<li>具较强的开拓精神，能够承担一定的工作压力，拥有独立谈判的能力；</li>
+	            				<li>不限专业</li>
+	            			</ul>
+	            		</div>
+	            		<p class="sub-title">三、寻求合作</p>
+	            		<div>
+	            			<p class="job-name"><span class='glyphicon glyphicon-tag'></span> 线上平台</p>
+	            			<p>人数：<span>4-5人</span></p>
+	            			<p>项目描述：</p>
+	            			<ul>
+	            				<li>收集、整理各级政府课题（基金）申报资料信息，组织资料进行申报；</li>
+	            				<li>负责客户沟通项目实施、管理及维护任务；</li>
+	            				<li>完成项目任务，配合其它成员完成项目体系总体目标；</li>
+	            				<li>参与公司组织的内部和外部培训，进行业务知识和技巧的学习提升；</li>
+	            			</ul>
+	            			<p>项目需求：</p>
+	            			<ul>
+	            				<li>本科及以上学历，学习期间曾参与过课题（项目）研究者优先；</li>
+	            				<li>认真的工作态度及工作责任心，有一定的文字功底；</li>
+	            				<li>具较强的开拓精神，能够承担一定的工作压力，拥有独立谈判的能力；</li>
+	            				<li>不限专业</li>
+	            			</ul>
+	            		</div>
+	            		<div>
+	            			<p class="job-name"><span class='glyphicon glyphicon-tag'></span> LTE-C安全研究项目</p>
+	            			<p>人数：<span>4-5人</span></p>
+	            			<p>职位描述：</p>
+	            			<ul>
+	            				<li>收集、整理各级政府课题（基金）申报资料信息，组织资料进行申报；</li>
+	            				<li>负责客户沟通项目实施、管理及维护任务；</li>
+	            				<li>完成项目任务，配合其它成员完成项目体系总体目标；</li>
+	            				<li>参与公司组织的内部和外部培训，进行业务知识和技巧的学习提升；</li>
+	            			</ul>
+	            			<p>职位要求：</p>
+	            			<ul>
+	            				<li>本科及以上学历，学习期间曾参与过课题（项目）研究者优先；</li>
+	            				<li>认真的工作态度及工作责任心，有一定的文字功底；</li>
+	            				<li>具较强的开拓精神，能够承担一定的工作压力，拥有独立谈判的能力；</li>
+	            				<li>不限专业</li>
+	            			</ul>
+	            		</div>
+	            		<p class="sub-title">四、联系方式</p>
+	            		<p>邮箱：<span>123456@qq.com</span></p>
+	            		<p>联系人：<span>王琳</span></p>
+	            		<p>联系电话：<span>12334443221</span></p>
+	            		<p>地址：<span>北京海淀区成府路28号五道口优盛大厦B903</span></p>
+	            	</div>
+	            </div>
+	          </div>
+	        </div>
+
+
+       <!--  右侧推送 -->
+       		<div class="col-xs-6 col-sm-3 pull-right" style="margin-top: 12px;padding: 10px">
+            <dl>
+              <dt>最近浏览过</dt>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+            </dl>
+            <dl>
+              <dt>相关实习</dt>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+            </dl>
+       		</div>
+    	</div>
+      <!-- 投递简历 -->
+      	<div class="resume">
+      		<a href="#resume" data-toggle="modal">申请职位</a>
+      		<h5><span class='glyphicon glyphicon-envelope'></span> <span>未投递</span></h5>
+      	</div>
+      	<div class="modal fade" id="resume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                      <h4 class="modal-title">
+                             投递简历
+                      </h4>
+                    </div>
+                    <div class="modal-body">
+                      	<form>
+						  <div class="form-group">
+						    <label class="sr-only" for="exampleInputAmount">投递邮箱</label>
+						    <div class="input-group">
+						      <div class="input-group-addon"><span class='glyphicon glyphicon-envelope'></span></div>
+						      <input type="text" class="form-control" id="exampleInputAmount" placeholder="此处自动填充邮箱">
+						    </div>
+						    <label class="sr-only" for="exampleInputAmount">职位</label>
+						    <div class="input-group">
+						      <div class="input-group-addon"><span class='glyphicon glyphicon-pencil'></span></div>
+						      <input type="text" class="form-control" id="exampleInputAmount" placeholder="请输入申请职位名称">
+						    </div>
+						  </div>
+						  <p>还没有简历？请先完善<a href="#">我的简历</a></p>
+						  <button type="submit" class="btn btn-success" style="margin-left: 145px;">申请职位</button>
+						</form>
+                    </div>
+<!--                     <div class="modal-footer">
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div> -->
+                  </div>
+                </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">
+            <p>
+                <span>关于我们</span>
+                <span>诚征英才</span>
+                <span>联系我们</span>
+                <span>服务协议</span>
+                <span>京ICP备15011063号</span>
+            </p>
+            <p>
+                Copyright 2015 GPX All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;安码科技公司&nbsp;&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/company.js"></script>
+</body>
+</html>

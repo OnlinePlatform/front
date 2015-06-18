@@ -23,7 +23,11 @@
 }
 
 .title_3{
+<<<<<<< HEAD
 	background: url(../img/bg4.png) no-repeat;
+=======
+	background: url(../img/bg4.jpg) no-repeat;
+>>>>>>> 3c93f22d45941ced63b093c8b0fde1feaa22b75a
 	width: 130px;
 	height: 45px;
 	line-height: 29px;
@@ -39,7 +43,11 @@
 	font-weight: bold;
 }
 .title_4{
+<<<<<<< HEAD
 	background:url(../img/bg5.png) repeat-x bottom
+=======
+	background:url(../img/bg5.jpg) repeat-x bottom
+>>>>>>> 3c93f22d45941ced63b093c8b0fde1feaa22b75a
 }
 
 
@@ -55,7 +63,11 @@
 	border: 2px;
 	border-style: outset;
 	border-color: #e9e8e8;
+<<<<<<< HEAD
 	background: url(../img/bg1.png) no-repeat;
+=======
+	background: url(../img/bg1.jpg) no-repeat;
+>>>>>>> 3c93f22d45941ced63b093c8b0fde1feaa22b75a
 }
 
 .rowlist1 .tit01 .wz {

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--     <link rel="icon" href="../../favicon.ico">
+ --><title>实习招聘</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <style type="text/css"> 
+    .sub-header {
+	    padding-bottom: 10px;
+	    border-bottom: 1px solid #EEE;
+	}
+    </style>
+  </head>
+<body>	
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+      <div class="collapse navbar-collapse pull-left">
+          <ul class="nav navbar-nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">教学实验</a></li>
+            <li><a href="#">科研合作</a></li>
+            <li><a href="#">就业实习</a></li>
+            <li><a href="#">关于我们</a></li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="#">注册</a></li>
+            <li  id="enter"><a href="#">登录</a>
+            	<div class="user-center hidden enter-position">
+	              <ul>
+	                <li><a href="#">企业入口</a></li>
+	                <li><a href="#">高校入口</a></li>
+	              </ul> 
+	            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row horizon">
+        <h1>实习信息查询系统</h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-9">
+          <div>
+            <div class="row">
+            	<form class="form-inline" style="margin-top: 10px">
+				  <div class="form-group">
+				    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+				    <div class="input-group">
+				      <div class="input-group-addon">类型</div>
+				      <input type="text" class="form-control" placeholder="输入职位或公司名称">
+				      <div class="input-group-addon">城市</div>
+				      <input type="text" class="form-control" placeholder="输入实习的城市" id="city-chosen" list='city'>					
+				      <datalist id="city">
+				      </datalist>
+				    </div>
+				  </div>
+				  <button type="submit" class="btn btn-success">搜索</button>
+				</form>
+             	<h2 class="sub-header">全部实习信息</h2>
+	          	<div class="table-responsive">
+	            	<table class="table table-striped table-bordered">
+	              <thead>
+	                <tr>
+	                  <th>公司</th>
+	                  <th>涉及城市</th>
+	                  <th>关键词</th>
+	                  <th>发布时间</th>
+	                  <th>点击量</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr>
+	                  <td><a href="#">安码科技</a></td>
+	                  <td>Lorem</td>
+	                  <td>ipsum</td>
+	                  <td>dolor</td>
+	                  <td>sit</td>
+	                </tr>
+	                <tr>
+	                  <td>1,002</td>
+	                  <td>amet</td>
+	                  <td>consectetur</td>
+	                  <td>adipiscing</td>
+	                  <td>elit</td>
+	                </tr>
+	                <tr>
+	                  <td>1,003</td>
+	                  <td>Integer</td>
+	                  <td>nec</td>
+	                  <td>odio</td>
+	                  <td>Praesent</td>
+	                </tr>
+	                <tr>
+	                  <td>1,011</td>
+	                  <td>eget</td>
+	                  <td>nulla</td>
+	                  <td>Class</td>
+	                  <td>aptent</td>
+	                </tr>
+	                <tr>
+	                  <td>1,012</td>
+	                  <td>taciti</td>
+	                  <td>sociosqu</td>
+	                  <td>ad</td>
+	                  <td>litora</td>
+	                </tr>
+	                <tr>
+	                  <td>1,013</td>
+	                  <td>torquent</td>
+	                  <td>per</td>
+	                  <td>conubia</td>
+	                  <td>nostra</td>
+	                </tr>
+	                <tr>
+	                  <td>1,014</td>
+	                  <td>per</td>
+	                  <td>inceptos</td>
+	                  <td>himenaeos</td>
+	                  <td>Curabitur</td>
+	                </tr>
+	                <tr>
+	                  <td>1,015</td>
+	                  <td>sodales</td>
+	                  <td>ligula</td>
+	                  <td>in</td>
+	                  <td>libero</td>
+	                </tr>
+	              </tbody>
+	            	</table>
+	          	</div>
+            </div>
+          </div>
+        </div>
+
+
+       <!--  右侧推送 -->
+        <div class="col-xs-6 col-sm-3 pull-right" style="padding: 10px; margin-top: -10px;">
+            <dl>
+              <dt>最新实习</dt>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd><a href="#">javascript高级程序设计</a></dd>
+              <dd>HTML5秘籍</dd>
+            </dl>
+            <dl>
+              <dt>最新新闻</dt>
+              <dd>百度前端实习</dd>
+              <dd>百度前端实习</dd>
+              <dd>百度前端实习</dd>
+              <dd>百度前端实习</dd>
+              <dd>百度前端实习</dd>
+              <dd>百度前端实习</dd>
+              <dd>百度前端实习</dd>
+            </dl>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">
+            <p>
+                <span>关于我们</span>
+                <span>诚征英才</span>
+                <span>联系我们</span>
+                <span>服务协议</span>
+                <span>京ICP备15011063号</span>
+            </p>
+            <p>
+                Copyright 2015 GPX All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;极派客公司&nbsp;&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/city.js"></script>
+
+</body>
+</html>
