@@ -18,5 +18,4 @@ $(function(){
     }
     hoverShow('#user');
     hoverShow('#enter');
-    console.log("1111");
 });

@@ -16,7 +16,17 @@
     <link href="css/individual_center.css" rel="stylesheet">
   </head>
   <script src="js/individual_center.js"></script>
-  <script src="js/city.js"></script>
+  <script type="text/javascript" src="js/area.js"></script>
+  <script type="text/javascript" src="js/location.js"></script>
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/465832.js"></script>
+  <script src="js/jquery-1.11.1.js"> </script>
+  <script src="js/bootstrap.min.js"> </script>
+  <script src="js/common.js"> </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      showLocation();
+    });
+</script>
   <body>
     <!--Navigator Start-->
     <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -441,7 +451,6 @@
             </div>
             <div class="hidden" id="opt_concern">
               <div class="col-xs-12 col-sm-12">
-                <div class="" id="opt_end">
               <div class="col-xs-3 col-sm-3">
                 <div class="thumbnail">
                   <div class="caption">
@@ -511,41 +520,12 @@
                         <label class="labl" for="addr">
                           所 在 地：
                         </label>
-                        <span id="addr">
-                          <select>
-                            <option value="" selected="true" disabled="true">
-                              所在省
-                            </option>
-                            <option>
-                              北京
-                            </option>
-                            <option>
-                              山东
-                            </option>
-                          </select>
-                          <select>
-                            <option value="" selected="true" disabled="true">
-                              所在市
-                            </option>
-                            <option>
-                              烟台
-                            </option>
-                            <option>
-                              青岛
-                            </option>
-                          </select>
-                          <select>
-                            <option value="" selected="true" disabled="true">
-                              所在县/区
-                            </option>
-                            <option>
-                              莱阳
-                            </option>
-                            <option>
-                              莱州
-                            </option>
-                          </select>
-                        </span>
+                        <div id="addr">
+                          <select id="loc_province" style="width:80px;"> </select>
+                          <select id="loc_city" style="width:80px;"> </select>
+                          <select id="loc_town" style="width:80px;"> </select>
+                          <input type="hidden" name="location_id" />
+                        </div>
                       </div>
                       <div class="form-group">
                         <label class="labl" for="position">
@@ -629,11 +609,5 @@
       </div>
     </div>
     <!--Footer End-->
-    <script src="js/jquery-1.11.1.js">
-    </script>
-    <script src="js/bootstrap.min.js">
-    </script>
-    <script src="js/common.js">
-    </script>
   </body>
 </html>
