@@ -30,7 +30,6 @@ function showLocation(province , city , town) {
 	$('#loc_town').change(function() {
 		$('input[@name=location_id]').val($(this).val());
 	})
-	
 	if (province) {
 		loc.fillOption('loc_province' , '0' , province);
 		
@@ -44,6 +43,5 @@ function showLocation(province , city , town) {
 		
 	} else {
 		loc.fillOption('loc_province' , '0');
-	}
-		
+	}	
 }
