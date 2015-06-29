@@ -32,7 +32,7 @@
     padding-top: 100px;
   }
 </style>
-  <body>
+  <body data-spy="scroll" data-target="#right_nav">
     <!--Navigator Start-->
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
@@ -608,10 +608,12 @@
           </div>
           <!--个人资料 End-->
           <!--导航 Start-->
+          <ul class="nav" id="right_nav" data-spy="affix" data-offset-top="400">
             <li><a href="#my_course">我的课程</a></li>
             <li><a href="#programs">科研合作</a></li>
             <li><a href="#opt">实习就业</a></li>
             <li><a href="#my_concern">我的关注</a></li>
+          </ul>
           <!--导航 End-->
         </div>
         <!--Right End-->
