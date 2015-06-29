@@ -27,6 +27,11 @@
       showLocation();
     });
 </script>
+<style type="text/css">
+  a:target{
+    padding-top: 100px;
+  }
+</style>
   <body>
     <!--Navigator Start-->
     <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -77,8 +82,10 @@
             </div>
           </div>
         <div class="col-xs-12 col-sm-9 ">
+        
           <!--我的课程 Head Start-->
           <div class="col-xs-12  bg">
+          <a class="anchor" id="my_course"></a>
             <ul class="nav pull-left">
               <li> <a href="#"> 我的课程 </a> </li>
             </ul>
@@ -196,8 +203,10 @@
             </div>
           </div>
           <!--我的课程 Body End-->
+          
           <!--科研合作 Head Start-->
           <div class="col-xs-12 bg">
+          <a class="anchor" id="programs"></a>
             <ul class="nav pull-left">
               <li> <a href="#"> 科研合作 </a> </li>
             </ul>
@@ -298,9 +307,10 @@
            </div>
           </div>
            <!--申请的项目 Body End-->
-
+           
           <!--实习就业 Head Start-->
           <div class="col-xs-12 bg">
+          <a class="anchor" id="opt"></a>
             <ul class="nav pull-left">
               <li>
                 <a href="#">
@@ -390,9 +400,10 @@
             <!--申请的实习 End-->
           </div>
           <!--实习就业 Body End-->
-
+          
           <!--我的关注 Head Start-->
           <div class="col-xs-12 bg">
+          <a class="anchor" id="my_concern"></a>
             <ul class="nav pull-left">
               <li>
                 <a href="#">
@@ -596,6 +607,12 @@
             </ul>
           </div>
           <!--个人资料 End-->
+          <!--导航 Start-->
+            <li><a href="#my_course">我的课程</a></li>
+            <li><a href="#programs">科研合作</a></li>
+            <li><a href="#opt">实习就业</a></li>
+            <li><a href="#my_concern">我的关注</a></li>
+          <!--导航 End-->
         </div>
         <!--Right End-->
       </div>

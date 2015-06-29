@@ -93,3 +93,13 @@ label.labl{
 input[type="text"]{
       vertical-align: middle;
     }
+.anchor{
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
+a.anchor:before {
+  content:"";
+  float: left;
+  height: 0px;
+}
