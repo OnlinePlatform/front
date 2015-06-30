@@ -103,3 +103,6 @@ a.anchor:before {
   float: left;
   height: 0px;
 }
+.marg_btm{
+  margin-bottom: 20px;
+}

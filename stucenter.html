@@ -32,7 +32,7 @@
     padding-top: 100px;
   }
 </style>
-  <body data-spy="scroll" data-target="#right_nav">
+  <body>
     <!--Navigator Start-->
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
@@ -81,38 +81,39 @@
               </div>
             </div>
           </div>
-        <div class="col-xs-12 col-sm-9 ">
-        
+        <div class="col-xs-12 col-sm-9 " data-spy="scroll" data-target="#right_nav">
           <!--我的课程 Head Start-->
           <div class="col-xs-12  bg">
-          <a class="anchor" id="my_course"></a>
+            <a class="anchor" id="my_course"></a>
             <ul class="nav pull-left">
               <li> <a href="#"> 我的课程 </a> </li>
             </ul>
             <p class="pull-left badge"><a href="#" data-toggle="modal" data-target="#messages" >4</a></p>
             <div class="modal fade" id="messages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <ul>
-                    <li>
-                      <a href="#">李楠回复了你</a>
-                    </li>
-                    <li>
-                      <a href="#">李楠回复了你</a>
-                    </li>
-                    <li>
-                      <a href="#">李楠回复了你</a>
-                    </li>
-                    <li>
-                      <a href="#">李楠回复了你</a>
-                    </li>
-                  </ul>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <ul>
+                      <li>
+                        <a href="#">李楠回复了你</a>
+                      </li>
+                      <li>
+                        <a href="#">李楠回复了你</a>
+                      </li>
+                      <li>
+                        <a href="#">李楠回复了你</a>
+                      </li>
+                      <li>
+                        <a href="#">李楠回复了你</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="pull-left glyphicon" style="-webkit-margin-before:10px;-webkit-margin-after:10px;color:#31b0d5;padding-left:20px;"><a data-toggle="modal" data-target="#addcourse" href="#" title="添加课程">+</a></div>
+            <div class="pull-left glyphicon" style="-webkit-margin-before:10px; -webkit-margin-after:10px; color:#31b0d5; padding-left:20px; ">
+              <a data-toggle="modal" data-target="#addcourse" href="#" title="添加课程">+</a>
+            </div>
             <div class="modal fade" id="addcourse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -206,7 +207,7 @@
           
           <!--科研合作 Head Start-->
           <div class="col-xs-12 bg">
-          <a class="anchor" id="programs"></a>
+            <a class="anchor" id="programs"></a>
             <ul class="nav pull-left">
               <li> <a href="#"> 科研合作 </a> </li>
             </ul>
@@ -241,76 +242,78 @@
                   </div>
                 </div>
           </div>
-        <div class="col-xs-12 col-sm-12">
-          <!--已完成项目 Body Start-->
-          <div id="my_program">
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 线上平台 </h4> </a>
-                  <p> 一个综合学习、科研、就业的平台 </p>
-                  <p> <a href="#program_info" data-toggle="modal" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--已完成项目 Body End-->
-
-          <!--进行中的项目 Body Start-->
-          <div id="my_programing" class="hidden">
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 线上平台 </h4> </a>
-                  <p> 一个综合学习、科研、就业的平台 </p>
-                  <p> <a href="#" class="btn-sm btn-info" role="进入项目"> 进入项目 </a> </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--进行中的项目 Body End-->
-
-          <!--申请的项目 Body Start-->
-          <div id="program_apl" class="hidden">
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 大数据 </h4> </a>
-                  <p> 基于云平台的***分析</p>
-                  <p> <a href="#" class="btn-sm btn-info btn-margin" role="进入项目"> 进入项目 </a> <label class="label label-success"> 申请成功 </label></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <div class="pull-right">
-                    <a href="javascript:ele_remove('courseId');" id="courseId" >
-                      <span class="glyphicon glyphicon-remove " aria-hidden="true"> </span>
-                    </a>
+          <!--科研合作 Body Start-->
+          <div class="col-xs-12 col-sm-12">
+            <!--已完成项目 Body Start-->
+            <div id="my_program">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <div class="caption">
+                    <a href="#"> <h4> 线上平台 </h4> </a>
+                    <p> 一个综合学习、科研、就业的平台 </p>
+                    <p> <a href="#program_info" data-toggle="modal" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
                   </div>
-                  <a href="#"> <h4> 大数据 </h4> </a>
-                  <p> 基于云平台的***分析</p>
-                  <p> <a href="#program_info" data-toggle="modal" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a> <label class="label label-danger"> 申请失败</label></p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4 col-md-3">
-              <div class="thumbnail">
-                <div class="caption">
-                  <a href="#"> <h4> 大数据 </h4> </a>
-                  <p> 基于云平台的***分析</p>
-                  <p> <a href="#program_info" data-toggle="modal" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a> <label class="label label-warning"> 正在审核 </label></p>
+            <!--已完成项目 Body End-->
+
+            <!--进行中的项目 Body Start-->
+            <div id="my_programing" class="hidden">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <div class="caption">
+                    <a href="#"> <h4> 线上平台 </h4> </a>
+                    <p> 一个综合学习、科研、就业的平台 </p>
+                    <p> <a href="#" class="btn-sm btn-info" role="进入项目"> 进入项目 </a> </p>
+                  </div>
                 </div>
               </div>
             </div>
-           </div>
+            <!--进行中的项目 Body End-->
+
+            <!--申请的项目 Body Start-->
+            <div id="program_apl" class="hidden">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <div class="caption">
+                    <a href="#"> <h4> 大数据 </h4> </a>
+                    <p> 基于云平台的***分析</p>
+                    <p> <a href="#" class="btn-sm btn-info btn-margin" role="进入项目"> 进入项目 </a> <label class="label label-success"> 申请成功 </label></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <div class="caption">
+                    <div class="pull-right">
+                      <a href="javascript:ele_remove('courseId'); " id="courseId" >
+                        <span class="glyphicon glyphicon-remove " aria-hidden="true"> </span>
+                      </a>
+                    </div>
+                    <a href="#"> <h4> 大数据 </h4> </a>
+                    <p> 基于云平台的***分析</p>
+                    <p> <a href="#program_info" data-toggle="modal" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a> <label class="label label-danger"> 申请失败</label></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <div class="caption">
+                    <a href="#"> <h4> 大数据 </h4> </a>
+                    <p> 基于云平台的***分析</p>
+                    <p> <a href="#program_info" data-toggle="modal" class="btn-sm btn-info btn-margin" role="查看详情"> 查看详情 </a> <label class="label label-warning"> 正在审核 </label></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--申请的项目 Body End-->
           </div>
-           <!--申请的项目 Body End-->
+           <!--科研合作 Body End-->
            
           <!--实习就业 Head Start-->
           <div class="col-xs-12 bg">
-          <a class="anchor" id="opt"></a>
+            <a class="anchor" id="opt"></a>
             <ul class="nav pull-left">
               <li>
                 <a href="#">
@@ -403,7 +406,7 @@
           
           <!--我的关注 Head Start-->
           <div class="col-xs-12 bg">
-          <a class="anchor" id="my_concern"></a>
+            <a class="anchor" id="my_concern"></a>
             <ul class="nav pull-left">
               <li>
                 <a href="#">
@@ -444,17 +447,9 @@
               <div class="col-sm-4 col-md-3">
                 <div class="thumbnail">
                   <div class="caption">
-                    <a href="#">
-                      <h4>
-                        Python
-                      </h4>
-                    </a>
-                    <p>
-                      课程码：B0po9e4
-                    </p>
-                    <p>
-                      任课教师：西西
-                    </p>
+                    <a href="#"> <h4> Python </h4> </a>
+                    <p> 课程码：B0po9e4 </p>
+                    <p> 任课教师：西西 </p>
                     <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
                   </div>
                 </div>
@@ -462,30 +457,27 @@
             </div>
             <div class="hidden" id="opt_concern">
               <div class="col-xs-12 col-sm-12">
-              <div class="col-xs-3 col-sm-3">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <a href="#">
-                      <h4>软件工程师</h4>
-                    </a>
-                    <p>安码科技有限公司</p>
-                    <p><a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a></p>
+                <div class="col-xs-3 col-sm-3">
+                  <div class="thumbnail">
+                    <div class="caption">
+                      <a href="#"> <h4>软件工程师</h4> </a>
+                      <p>安码科技有限公司</p>
+                      <p><a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
               </div>
             </div>
           </div>
           <!--我的关注 Body End-->
         </div>
+      </div>
         <!--Left End-->
         <!-- Right Start -->
         <div class="col-xs-6 col-sm-3 pull-right ">
           <!--个人资料 Start-->
-          <div class="col-xs-12 layout  bg">
-            <div class="col-xs-1">
-            </div>
+          <div class="col-xs-12 layout bg marg_btm">
+            <div class="col-xs-1"> </div>
             <!--编辑个人资料 Start-->
             <div class="modal fade" id="edit_material" tabindex="-1" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -532,9 +524,9 @@
                           所 在 地：
                         </label>
                         <div id="addr">
-                          <select id="loc_province" style="width:80px;"> </select>
-                          <select id="loc_city" style="width:80px;"> </select>
-                          <select id="loc_town" style="width:80px;"> </select>
+                          <select id="loc_province" style="width:80px; "> </select>
+                          <select id="loc_city" style="width:80px; "> </select>
+                          <select id="loc_town" style="width:80px; "> </select>
                           <input type="hidden" name="location_id" />
                         </div>
                       </div>
@@ -581,12 +573,13 @@
             </div>
             <!--编辑个人资料 End-->
 
-            
-            <div class="col-xs-4 portrait" onmouseover="show_mask();" onmouseout="hide_mask();">
-            <div class="popWindow" id="popWindow" style="display:none;">
-              </div>
-              <div class="update_text" id="update_text" style="display:none;">
-                <a href="#" style="cursor:pointer;"><input type="file" name="" id="" accept="image/png,image/gif,image/jpeg"> 更改头像</a>
+            <div class="col-xs-4 portrait" onmouseover="show_mask(); " onmouseout="hide_mask(); ">
+              <div class="popWindow" id="popWindow" style="display:none; "> </div> 
+              <div class="update_text" id="update_text" style="display:none; ">
+                <a href="#" style="cursor:pointer; ">
+                  <input type="file" name="" id="" accept="image/png,image/gif,image/jpeg">
+                  更改头像
+                </a>
               </div>
               <img src="img/portrait.jpg" />
             </div>
@@ -608,12 +601,14 @@
           </div>
           <!--个人资料 End-->
           <!--导航 Start-->
-          <ul class="nav" id="right_nav" data-spy="affix" data-offset-top="400">
-            <li><a href="#my_course">我的课程</a></li>
-            <li><a href="#programs">科研合作</a></li>
-            <li><a href="#opt">实习就业</a></li>
-            <li><a href="#my_concern">我的关注</a></li>
-          </ul>
+          <div id="right_nav" data-spy="affix" data-offset-top="300">
+            <ul class="nav">
+              <li><a href="#my_course">我的课程</a></li>
+              <li><a href="#programs">科研合作</a></li>
+              <li><a href="#opt">实习就业</a></li>
+              <li><a href="#my_concern">我的关注</a></li>
+            </ul>
+          </div>
           <!--导航 End-->
         </div>
         <!--Right End-->
@@ -624,7 +619,7 @@
     <div class="footer">
       <div class="footer-text">
         <p> <span> 关于我们 </span> <span> 诚征英才 </span> <span> 联系我们 </span> <span> 服务协议 </span> <span> 京ICP备15011063号 </span> </p>
-        <p> Copyright 2015 GPX All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;极派客公司&nbsp;&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp; </p>
+        <p> Copyright 2015 GPX All Rights Reserved&nbsp; &nbsp; &nbsp; &nbsp; 极派客公司&nbsp; &nbsp; &nbsp; &nbsp; 版权所有&nbsp; &nbsp; &nbsp; &nbsp; </p>
       </div>
     </div>
     <!--Footer End-->
