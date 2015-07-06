@@ -121,3 +121,14 @@ a.anchor:before {
   color: #787d82;
   font-size: 12px;
 }
+.s-chosen{
+  background-color: #eee;
+  border-bottom: none;
+}
+#s-nav li{
+  margin-bottom:2px;
+}
+#s-nav li>a:focus, #s-nav li>a:hover {
+  background-color: #eee;
+  border-bottom:none;
+}

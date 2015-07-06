@@ -30,3 +30,7 @@ function getElementByClassName(class_name){
       document.getElementById("popWindow").style.display="none";
       document.getElementById("update_text").style.display="none";
     }
+    function show_msglist(){
+      document.getElementById("course").classList.remove("s-chosen");
+      document.getElementById("messages").classList.add("s-chosen");
+    }
