@@ -12,28 +12,36 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.tabs.js"></script>
 	<script src="js/jquery.lazyload.js"></script>
+	<script src="js/common.js"></script>
     
 </head>
 <body>
 	<!--导航栏-->
 	<nav class="navbar navbar-fixed-top navbar-inverse">
-      	<div class="container">
-      		<div class="collapse navbar-collapse pull-left">
-          		<ul class="nav navbar-nav">
-            		<li><a href="index.html">首页</a></li>
-            		<li><a href="#">教学实验</a></li>
-            		<li><a href="researchhome.html">科研合作</a></li>
-            		<li><a href="workhome.html">就业实习</a></li>
-            		<li><a href="#">关于我们</a></li>
-          		</ul>
-        	</div>
-	        <div class="collapse navbar-collapse">
-	          	<ul class="nav navbar-nav pull-right">
-	            	<li><a href="#">注册</a></li>
-	            	<li><a href="#">登录</a></li>
-	          	</ul>
-	        </div>
-      	</div>
+      <div class="container">
+      <div class="collapse navbar-collapse pull-left">
+          <ul class="nav navbar-nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">教学实验</a></li>
+            <li><a href="#">科研合作</a></li>
+            <li><a href="#">就业实习</a></li>
+            <li><a href="#">关于我们</a></li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="#">注册</a></li>
+            <li  id="enter"><a href="#">登录</a>
+            	<div class="user-center hidden enter-position">
+	              <ul>
+	                <li><a href="#">企业入口</a></li>
+	                <li><a href="#">高校入口</a></li>
+	              </ul> 
+	            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     
@@ -42,106 +50,116 @@
 			<div class="span9">
 				<div class="demo2">
 					<ul class="tab_menu nav">
-						<li class="current">公司</li>
-						<li>院校</li>
+						<li class="current">寻求合作</li>
+						<li>成果转让</li>
 					</ul>
 
 					<div class="tab_box">
-						<div>	
+						<div>
 							<form class="form-inline" style="margin-top: 10px">
-								<div class="form-group">
-							    	<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-							    	<div class="input-group">
-							      		<div class="input-group-addon">公司</div>
-							      		<input type="text" class="form-control" placeholder="输入公司名称" id="company-chosen">
-							      		<div class="input-group-addon">城市</div>
-							      		<input type="text" class="form-control" placeholder="输入实习城市" id="city-chosen" list='city'>
-							      		<div class="input-group-addon">需求</div>
-							      		<input type="text" class="form-control" placeholder="输入工作需求" id="req-chosen">					
-							      		<datalist id="city"></datalist>
+							  <div class="form-group">
+							    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+							    <div class="input-group">
+							      	<div class="input-group-addon">单位</div>
+							      	<input type="text" class="form-control" placeholder="单位名称" id="org-chosen">
+							      	<div class="input-group-addon">类型</div>
+							      	<input type="text" class="form-control" placeholder="公司/院校" id="co-style">
+							      	<div class="input-group-addon">城市</div>
+							      	<input type="text" class="form-control" placeholder="所在城市" id="city-chosen" list='city'>					
+							      	<datalist id="city"></datalist>
 							    	</div>
 							  	</div>
-							  	<button type="submit" class="btn btn-info btn-sm">搜索</button>
-							</form>
-							<table class="table table-striped table-hover"style="border:1px solid #b7b6b6;">
-
+							  	<button type="submit" class="btn btn-success">搜索</button>
+							</form>	
+							<table class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th>公司</th>
+										<th>单位</th>
+										<th>类型</th>
 										<th>地点</th>
-										<th>需求</th>
+										<th>合作需求</th>
 										<th>发布时间</th>
 										<th>状态</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td><a href="#">蘑菇街</a></td>
+										<td><a href="#">北京邮电大学</a></td>
+										<td>院校</td>
 										<td>北京</td>
-										<td>XXX系统研发</td>
+										<td>线上平台系统研发</td>
 										<td>2015.05.26</td>
 										<td>寻求中..</td>
 									</tr>
 									<tr>
-										<td><a href="#">蘑菇街</a></td>
+										<td><a href="#">北京邮电大学</a></td>
+										<td>院校</td>
 										<td>北京</td>
-										<td>XXX系统研发</td>
+										<td>线上平台系统研发</td>
 										<td>2015.05.26</td>
 										<td>寻求中..</td>
 									</tr>
 									<tr>
-										<td><a href="#">蘑菇街</a></td>
-										<td>北京</td>
-										<td>XXX系统研发</td>
+										<td><a href="#">安码科技</a></td>
+										<td>企业</td>
+										<td>南京</td>
+										<td>灾备安全技术研究</td>
 										<td>2015.05.26</td>
 										<td>寻求中..</td>
 									</tr>
 									<tr>
-										<td><a href="#">蘑菇街</a></td>
+										<td><a href="#">北京邮电大学</a></td>
+										<td>院校</td>
 										<td>北京</td>
-										<td>XXX系统研发</td>
+										<td>线上平台系统研发</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;</td>
+										<td>已结束 !</td>
 									</tr>
 									<tr>
-										<td><a href="#">蘑菇街</a></td>
+										<td><a href="#">安码科技</a></td>
+										<td>企业</td>
 										<td>北京</td>
-										<td>XXX系统研发</td>
-										<td>2015.05.26</td>
-										<td>已结束!&nbsp;</td>
-									</tr>
-									<tr>
-										<td><a href="#">蘑菇街</a></td>
-										<td>北京</td>
-										<td>XXX系统研发</td>
+										<td>灾备安全技术研究</td>
 										<td>2015.05.26</td>
 										<td>寻求中..</td>
 									</tr>
 									<tr>
-										<td><a href="#">蘑菇街</a></td>
+										<td><a href="#">北京邮电大学</a></td>
+										<td>院校</td>
 										<td>北京</td>
-										<td>XXX系统研发</td>
+										<td>线上平台系统研发</td>
 										<td>2015.05.26</td>
 										<td>寻求中..</td>
 									</tr>
 									<tr>
-										<td><a href="#">蘑菇街</a></td>
+										<td><a href="#">安码科技</a></td>
+										<td>企业</td>
+										<td>南京</td>
+										<td>灾备安全技术研究</td>
+										<td>2015.05.26</td>
+										<td>已结束 !</td>
+									</tr>
+									<tr>
+										<td><a href="#">北京邮电大学</a></td>
+										<td>院校</td>
 										<td>北京</td>
-										<td>XXX系统研发</td>
+										<td>线上平台系统研发</td>
 										<td>2015.05.26</td>
 										<td>寻求中..</td>
 									</tr>
 									<tr>
-										<td><a href="#">蘑菇街</a></td>
+										<td><a href="#">安码科技</a></td>
+										<td>企业</td>
 										<td>北京</td>
-										<td>XXX系统研发</td>
+										<td>灾备安全技术研究</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;</td>
+										<td>已结束 !</td>
 									</tr>
 									<tr>
-										<td><a href="#">蘑菇街</a></td>
+										<td><a href="#">北京邮电大学</a></td>
+										<td>院校</td>
 										<td>北京</td>
-										<td>XXX系统研发</td>
+										<td>线上平台系统研发</td>
 										<td>2015.05.26</td>
 										<td>寻求中..</td>
 									</tr>
@@ -174,23 +192,20 @@
 								<div class="form-group">
 							    	<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
 							    	<div class="input-group">
-							      		<div class="input-group-addon">院校</div>
-							      		<input type="text" class="form-control" placeholder="输入院校名称" id="college-chosen">
-							      		<div class="input-group-addon">方向</div>
-							      		<input type="text" class="form-control" placeholder="输入实习城市" id="city-chosen" list='city'>
-							      		<div class="input-group-addon">需求</div>
-							      		<input type="text" class="form-control" placeholder="输入合作需求" id="coop-chosen">					
+							      		<div class="input-group-addon">单位</div>
+							      		<input type="text" class="form-control" placeholder="单位名称" id="company-chosen">
+							      		<div class="input-group-addon">成果</div>
+							      		<input type="text" class="form-control" placeholder="成果" id="city-chosen" list='city'>				
 							      		<datalist id="city"></datalist>
 							    	</div>
 							  	</div>
-							  	<button type="submit" class="btn btn-info btn-sm">搜索</button>
+							  	<button type="submit" class="btn btn-success btn-sm">搜索</button>
 							</form>
-							<table class="table table-striped table-hover"style="border:1px solid #b7b6b6;">
+							<table class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th>院校</th>
-										<th>合作信息</th>
-										<th>方向</th>
+										<th>单位</th>
+										<th>成果</th>
 										<th>发布时间</th>
 										<th>状态</th>
 									</tr>
@@ -198,73 +213,63 @@
 								<tbody>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>寻求中..</td>
+										<td>转让中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>寻求中..</td>
+										<td>转让中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>寻求中..</td>
+										<td>转让中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;</td>
+										<td>已结束 !</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;</td>
+										<td>转让中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>寻求中..</td>
+										<td>转让中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>寻求中..</td>
+										<td>已结束 !</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>寻求中..</td>
+										<td>转让中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;</td>
+										<td>已结束 !</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
-										<td>XXX系统研发</td>
-										<td>Java</td>
+										<td>线上平台系统</td>
 										<td>2015.05.26</td>
-										<td>寻求中..</td>
+										<td>转让中..</td>
 									</tr>
 								</tbody>
 							</table>
@@ -296,7 +301,7 @@
 			<div class="span3 cir_border">
 				
 				<div class="assign">
-					<div class="line">成果转让</div>
+					<div class="line">最近转让</div>
 					<ul class="news_push">
 						<li>
 							<a href="#">新闻资讯新闻资讯新闻资讯</a>
@@ -316,16 +321,10 @@
 						<li>
 							<a href="#">天气预报天气预报天气预报天气预报</a>
 						</li>
-						<li>
-							<a href="#">房产家居房产家居房产家居</a>
-						</li>
-						<li>
-							<a href="#">网络游戏网络游戏网络游戏网络游戏</a>
-						</li>
 					</ul>
 				</div>
 				<div class="assign">
-					<div class="line">最新信息</div>
+					<div class="line">最新合作</div>
 					<ul class="news_push">
 						<li>
 							<a href="#">新闻资讯新闻资讯新闻资讯</a>
@@ -344,12 +343,6 @@
 						</li>
 						<li>
 							<a href="#">天气预报天气预报天气预报天气预报</a>
-						</li>
-						<li>
-							<a href="#">房产家居房产家居房产家居</a>
-						</li>
-						<li>
-							<a href="#">网络游戏网络游戏网络游戏网络游戏</a>
 						</li>
 					</ul>
 				</div>
