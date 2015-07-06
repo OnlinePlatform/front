@@ -132,3 +132,9 @@ a.anchor:before {
   background-color: #eee;
   border-bottom:none;
 }
+.bubble{
+  padding: 0px 7px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: #d0d6d9;
+}
