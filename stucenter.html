@@ -600,29 +600,42 @@
               <!--我的关注 Body End-->
             </div>
             <!--我的关注 Start-->
+
             <!--消息列表 Start-->
             <div id="messages" class="col-xs-12 hidden">
               <!--消息列表 Head Start-->
-              <div class="col-xs-12">
+              <div class="col-xs-12 marg_btm">
                 <ul class="nav pull-left bigger_menu">
                   <li id="msg_list">消息列表</li>
                 </ul>
               </div>
               <!--消息列表 Head End-->
-              <ul>
-                <li>
-                  <a href="#">李楠回复了你</a>
-                </li>
-                <li>
-                  <a href="#">李楠回复了你</a>
-                </li>
-                <li>
-                  <a href="#">李楠回复了你</a>
-                </li>
-                <li>
-                  <a href="#">李楠回复了你</a>
-                </li>
-              </ul>
+              <!--消息列表 Body Start-->
+              <div class="row">
+                <div class="col-sm-1 center">
+                  <img src="img/user.png" alt="课程" class="user-img">
+                  <p>Amy</p>
+                </div>
+                <div class="col-sm-11 board-content">
+                  <div>科目：<a href="#" >JavaScript</a></div>
+                  <div>我的问题：navbarsdropdown下拉菜单怎么实现</div>
+                  <div>回复我： 这个很简单</div>
+                  <a class="pull-right" data-toggle="modal" href="#response">回复</a>
+                </div> 
+              </div>
+              <div class="row">
+                <div class="col-sm-1 center">
+                  <img src="img/user.png" alt="课程" class="user-img">
+                  <p>Amy</p>
+                </div>
+                <div class="col-sm-11 board-content">
+                <div>科目：<a href="#" >JavaScript</a></div>
+                <div>我的问题：  navbarsdropdown下拉菜单用js怎么写</div>   
+                <div>回复我： 嗯～～，这个提问大家都在考虑...</div>
+                <a class="pull-right" data-toggle="modal" href="#response">回复</a>
+                </div> 
+              </div>
+              <!--消息列表 Body End-->
             </div>
             <!--消息列表 End-->
           </div>
@@ -639,5 +652,27 @@
       </div>
     </div>
     <!--Footer End-->
+    <div class="modal fade" id="response" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                     回复
+              </h4>
+            </div>
+            <div class="modal-body">
+              <textarea style="width:100%;min-height:100px;"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+              </button>
+              <button type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
