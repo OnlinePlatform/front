@@ -1,4 +1,4 @@
-function getElementByClassName(class_name){
+/*function getElementByClassName(class_name){
       var classElements=[];
       var allElements=document.getElementsByTagName("*");
       for (var i = 0; i < allElements.length; i++) {
@@ -29,8 +29,5 @@ function getElementByClassName(class_name){
     function hide_mask(){
       document.getElementById("popWindow").style.display="none";
       document.getElementById("update_text").style.display="none";
-    }
-    function show_msglist(){
-      document.getElementById("course").classList.remove("s-chosen");
-      document.getElementById("messages").classList.add("s-chosen");
-    }
+    }*/
+    

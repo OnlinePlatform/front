@@ -22,10 +22,25 @@
   <script src="js/bootstrap.min.js"> </script>
   <script src="js/common.js"> </script>
   <script type="text/javascript">
-    $(document).ready(function() {
+  function show_msglist(){
+      document.getElementById("course").classList.remove("s-chosen");
+      document.getElementById("course").classList.add("hidden");
+      document.getElementById("messages").classList.remove("hidden");
+      var left_a=document.getElementById("left_nav").getElementsByTagName("a");
+      for (var i = 0; i < left_a.length; i++) {
+        if (left_a[i].getAttribute("href")=="#course") {
+          left_a[i].classList.remove("s-chosen");
+        }
+        if(left_a[i].getAttribute("href")=="#messages"){
+          left_a[i].classList.add("s-chosen");
+        }
+      };
+    }
+    window.onload=function(){showLocation();};
+    /*$(document).ready(function() {
       showLocation();
     });
-</script>
+*/</script>
 <style type="text/css">
   a:target{
     padding-top: 100px;
@@ -184,11 +199,11 @@
           <!--导航 Start-->
           <div id="left_nav">
             <ul class="nav" id="s-nav">
-              <li class=""><a href="#course"><span>我的课程</span></a></li>
-              <li class=""><a href="#coresearch"><span>科研合作</span></a></li>
-              <li class=""><a href="#internship"><span>实习就业</span></a></li>
-              <li class=""><a href="#concern"><span>我的关注</span></a></li>
-              <li class=""><a href="#messages"><span>消息列表</span></a></li>
+              <li class=""><a href="#course"class=""><span>我的课程</span></a></li>
+              <li class=""><a href="#coresearch"class=""><span>科研合作</span></a></li>
+              <li class=""><a href="#internship"class=""><span>实习就业</span></a></li>
+              <li class=""><a href="#concern"class=""><span>我的关注</span></a></li>
+              <li class=""><a href="#messages"class=""><span>消息列表</span></a></li>
             </ul>
           </div>
           <!--导航 End-->
@@ -219,7 +234,7 @@
                   <li>我的课程</li>
                 </ul>
                 <!-- <p class="pull-left badge"><a href="#" data-toggle="modal" data-target="#messages" >4</a></p> -->
-                <p class="pull-left badge"><a id="msg_num" href="javascript:show_msglist()">4</a></p>
+                <p class="pull-left badge"><a id="msg_num" href="javascript:show_msglist();">4</a></p>
                 <!-- <div class="modal fade" id="messages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
