@@ -5,7 +5,7 @@
   clear: left;
 }
 .opt_ico{
-  display:block;
+  display:inline-block;
   width:20px;
   height:20px;
 }
@@ -105,4 +105,19 @@ a.anchor:before {
 }
 .marg_btm{
   margin-bottom: 20px;
+}
+#indiv_center{
+  margin-top: 30px;
+}
+.menu{
+  background-color: #f9f9f9;
+  border-top: 1px solid #d0d6d9;
+}
+.bigger_menu{
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+}
+.position,.indiv_sig{
+  color: #787d82;
+  font-size: 12px;
 }
