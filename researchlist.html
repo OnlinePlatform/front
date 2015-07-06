@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
     <title> 科研合作详情</title>
-    <link href="css/bootstrap-combined.css" rel="stylesheet">
+    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
     <link href="css/researchlist.css" rel="stylesheet">
@@ -53,11 +53,11 @@
 							    	<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
 							    	<div class="input-group">
 							      		<div class="input-group-addon">公司</div>
-							      		<input type="text" class="form-control" placeholder="输入职位或公司名称">
+							      		<input type="text" class="form-control" placeholder="输入公司名称" id="company-chosen">
 							      		<div class="input-group-addon">城市</div>
-							      		<input type="text" class="form-control" placeholder="输入实习的城市" id="city-chosen" list='city'>
+							      		<input type="text" class="form-control" placeholder="输入实习城市" id="city-chosen" list='city'>
 							      		<div class="input-group-addon">需求</div>
-							      		<input type="text" class="form-control" placeholder="输入工作的需求" id="city-chosen">					
+							      		<input type="text" class="form-control" placeholder="输入工作需求" id="req-chosen">					
 							      		<datalist id="city"></datalist>
 							    	</div>
 							  	</div>
@@ -80,70 +80,70 @@
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">蘑菇街</a></td>
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">蘑菇街</a></td>
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">蘑菇街</a></td>
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;<button type="button" class="btn btn-warning btn-xs" onclick="window.open('#')">结束</button></td>
+										<td>已结束!&nbsp;</td>
 									</tr>
 									<tr>
 										<td><a href="#">蘑菇街</a></td>
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;<button type="button" class="btn btn-warning btn-xs" onclick="window.open('#')">结束</button></td>
+										<td>已结束!&nbsp;</td>
 									</tr>
 									<tr>
 										<td><a href="#">蘑菇街</a></td>
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">蘑菇街</a></td>
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">蘑菇街</a></td>
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">蘑菇街</a></td>
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;<button type="button" class="btn btn-warning btn-xs" onclick="window.open('#')">结束</button></td>
+										<td>已结束!&nbsp;</td>
 									</tr>
 									<tr>
 										<td><a href="#">蘑菇街</a></td>
 										<td>北京</td>
 										<td>XXX系统研发</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 								</tbody>
 							</table>
@@ -175,11 +175,11 @@
 							    	<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
 							    	<div class="input-group">
 							      		<div class="input-group-addon">院校</div>
-							      		<input type="text" class="form-control" placeholder="输入职位或公司名称">
+							      		<input type="text" class="form-control" placeholder="输入院校名称" id="college-chosen">
 							      		<div class="input-group-addon">方向</div>
-							      		<input type="text" class="form-control" placeholder="输入实习的城市" id="city-chosen" list='city'>
+							      		<input type="text" class="form-control" placeholder="输入实习城市" id="city-chosen" list='city'>
 							      		<div class="input-group-addon">需求</div>
-							      		<input type="text" class="form-control" placeholder="输入工作的需求" id="city-chosen">					
+							      		<input type="text" class="form-control" placeholder="输入合作需求" id="coop-chosen">					
 							      		<datalist id="city"></datalist>
 							    	</div>
 							  	</div>
@@ -201,70 +201,70 @@
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;<button type="button" class="btn btn-warning btn-xs" onclick="window.open('#')">结束</button></td>
+										<td>已结束!&nbsp;</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;<button type="button" class="btn btn-warning btn-xs" onclick="window.open('#')">结束</button></td>
+										<td>已结束!&nbsp;</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>已结束!&nbsp;<button type="button" class="btn btn-warning btn-xs" onclick="window.open('#')">结束</button></td>
+										<td>已结束!&nbsp;</td>
 									</tr>
 									<tr>
 										<td><a href="#">北京邮电大学</a></td>
 										<td>XXX系统研发</td>
 										<td>Java</td>
 										<td>2015.05.26</td>
-										<td>寻求中..<button type="button" class="btn btn-success btn-xs" onclick="window.open('#')">查看</button></td>
+										<td>寻求中..</td>
 									</tr>
 								</tbody>
 							</table>
