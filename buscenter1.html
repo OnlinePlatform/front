@@ -59,10 +59,11 @@
         <!-- Left Start -->
         <div class="col-xs-2 col-sm-2">
           <!--个人资料 Start-->
-          <div class="col-xs-12 layout  marg_btm">
-            <div class="col-xs-1"> </div>
-            <!--编辑个人资料 Start-->
-            <div class="modal fade" id="edit_material" tabindex="-1" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="col-xs-12 layout bg">
+            <div class="col-xs-1">
+            </div>
+            <!--编辑企业资料 Start-->
+            <div class="modal fade" id="edit_material" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -74,114 +75,118 @@
                       </span>
                     </button>
                     <h4 class="modal-title" id="myModalLabel">
-                      编辑个人资料
+                      编辑企业资料
                     </h4>
                   </div>
                   <div class="modal-body">
                     <form>
                       <div class="form-group">
-                        <label class="labl" for="nickname">
-                          昵 称：
+                        <label class="labl" for="name">
+                          企业名称：
                         </label>
-                        <input type="text" id="nickname" class="" />
+                        <input type="text" id="name" class="">
                       </div>
                       <div class="form-group">
-                        <label class="labl" for="gender">
-                          性 别：
+                        <label class="labl" for="registered_capital">
+                          注册资本：
                         </label>
-                        <input type="radio" id="male" name="gender">
-                        <label  for="male">
-                          男
+                        <input type="text" id="registered_capital" class="">
+                      </div>
+                      <div class="form-group">
+                        <label class="labl" for="email_bus">
+                          企业邮箱：
                         </label>
-                        <input type="radio" id="female" name="gender">
-                        <label  for="female">
-                          女
+                        <input type="email" id="email_bus" class="">
+                      </div>
+                      <div class="form-group">
+                        <label class="labl" for="tel_bus">
+                          企业电话：
                         </label>
-                        <input type="radio" id="secret" name="gender">
-                        <label  for="secret">
-                          保密
-                        </label>
+                        <input type="tel" id="tel_bus" class="">
                       </div>
                       <div class="form-group">
                         <label class="labl" for="addr">
-                          所 在 地：
+                          企业地址：
                         </label>
-                        <div id="addr">
-                          <select id="loc_province" style="width:80px; "> </select>
-                          <select id="loc_city" style="width:80px; "> </select>
-                          <select id="loc_town" style="width:80px; "> </select>
-                          <input type="hidden" name="location_id" />
-                        </div>
+                        <span id="addr">
+                          <select>
+                            <option value="" selected="true" disabled="true">
+                              所在省
+                            </option>
+                            <option>
+                              北京
+                            </option>
+                            <option>
+                              山东
+                            </option>
+                          </select>
+                          <select>
+                            <option value="" selected="true" disabled="true">
+                              所在市
+                            </option>
+                            <option>
+                              烟台
+                            </option>
+                            <option>
+                              青岛
+                            </option>
+                          </select>
+                          <select>
+                            <option value="" selected="true" disabled="true">
+                              所在县/区
+                            </option>
+                            <option>
+                              莱阳
+                            </option>
+                            <option>
+                              莱州
+                            </option>
+                          </select>
+                        </span>
+                        <input type="text" id="detail_addr" placeholder="详细地址" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label class="labl" for="position">
-                          职 位：
+                        <label for="intro_bus">
+                          企业简介：
                         </label>
-                        <input type="text" id="position" class="" />
-                      </div>
-                      
-                      <div class="form-group">
-                        <label class="labl" for="school">
-                          学 校：
-                        </label>
-                        <input type="text" id="school" class="" />
-                      </div>
-                      
-                      <div class="form-group">
-                        <label class="labl" for="email">
-                          邮 箱：
-                        </label>
-                        <input type="email" id="email" class="" />
-                      </div>
-                      
-                      <div class="form-group">
-                        <label for="indiv_sig">
-                          个 性 签 名：
-                        </label>
-                        <textarea id="indiv_sig" placeholder="我的个性签名" class="form-control">
-                        </textarea>
+                        <textarea placeholder="企业简介" class="form-control"> </textarea>
                       </div>
                     </form>
                   </div>
-                  <div class='modal-footer'>
-                    <a href='#' class='btn btn-success'>
+                  <div class="modal-footer">
+                    <a href="#" class="btn btn-success">
                       保存
                     </a>
-                    <a href='#' class='btn' data-dismiss='modal'>
+                    <a href="#" class="btn" data-dismiss="modal">
                       关闭
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <!--编辑个人资料 End-->
+            <!--编辑企业资料 End-->
 
-            <div class="col-xs-4 portrait" onmouseover="show_mask(); " onmouseout="hide_mask(); ">
-              <div class="popWindow" id="popWindow" style="display:none; "> </div> 
-              <div class="update_text" id="update_text" style="display:none; ">
-                <a href="#" style="cursor:pointer; ">
-                  <input type="file" name="" id="" accept="image/png,image/gif,image/jpeg">
-                  更改头像
-                </a>
+            <div class="col-xs-4 portrait" onmouseover="show_mask();" onmouseout="hide_mask();">
+              <div class="popWindow" id="popWindow" style="display:none;">
               </div>
-              <img src="img/portrait.jpg" />
+              <div class="update_text" id="update_text" style="display:none;">
+                <a href="#" style="cursor:pointer;"><input type="file" name="" id="" accept="image/png,image/gif,image/jpeg"> 更改头像</a>
+              </div>
+                <img alt="logo" src="img/anma.jpg">
             </div>
             <div class="pull-right">
-            <ul class="navbar-text nav ">
-              <li><span id="nickname" style="font:20px/1.5 微软雅黑;font-weight:bold;"> 小王子 </span> </li>
-              <li><span class="position"> 开发工程师 </span> </li>
-            </ul>
               <a href="#" class="opt_ico" data-toggle="modal" data-target="#edit_material">
                 <span class="glyphicon glyphicon-edit " aria-hidden="true">
                 </span>
               </a>
             </div>
-            <ul class="navbar-text nav">
-            <li><span class="indiv_sig"> 既然选择了远方，就只顾风雨兼程 </span> </li>
-            </ul>
-          </div>
-          <!--个人资料 End-->
-          <!--导航 Start-->
+            <div class="navbar-text nav">
+              <dl>
+                <dt>北京安码科技有限公司</dt>
+                <dd class="indent">一家孵化于北京邮电大学信息安全中心与灾备技术国家工程实验室的国家级高新技术企业，隶属于中关村科技园区。公司业务涵盖网络安全、存储灾备、行业信息化s等多个领域，围绕客户应用提供最佳实践的网络安全、存储灾备一体化保障解决方案，客户遍及世界500强在内的多个企业及军政单位。</dd>
+              </dl>
+            </div>
+          </div>          <!--导航 Start-->
           <div id="left_nav">
             <ul class="nav" id="s-nav">
               <li class=""><a href="#course"><span>发布的课程</span></a></li>
