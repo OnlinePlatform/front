@@ -36,11 +36,7 @@
         }
       };
     }
-    window.onload=function(){showLocation();};
-    /*$(document).ready(function() {
-      showLocation();
-    });
-*/</script>
+    </script>
 <style type="text/css">
   a:target{
     padding-top: 100px;
@@ -349,8 +345,10 @@
                   </div>
                 </div>
                 <div class="hidden" id="s-part3">
-                <label>输入要搜索的课程信息：</label><input type="text"/>
-                <input type="submit"/>
+                <div class="input-group">
+                <input type="text" class="form-control" placeholder="输入要搜索的课程信息" style="width:500px;margin-top:20px;" />
+                </div>
+                <button type="submit" class="btn btn-success">搜索</button>
                 </div>
               </div>
               <!--我的课程 Body End-->
