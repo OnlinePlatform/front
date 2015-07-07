@@ -36,11 +36,7 @@
         }
       };
     }
-    window.onload=function(){showLocation();};
-    /*$(document).ready(function() {
-      showLocation();
-    });
-*/</script>
+    </script>
 <style type="text/css">
   a:target{
     padding-top: 100px;
@@ -204,6 +200,7 @@
               <li class=""><a href="#internship"class=""><span>实习就业</span></a></li>
               <li class=""><a href="#concern"class=""><span>我的关注</span></a></li>
               <li class=""><a href="#messages"class=""><span>消息列表</span></a></li>
+              <li class=""><a href="#resume"class=""><span>生成简历</span></a></li>
             </ul>
           </div>
           <!--导航 End-->
@@ -233,8 +230,9 @@
                 <ul class="nav pull-left bigger_menu">
                   <li>我的课程</li>
                 </ul>
+                <p class="pull-left bubble"><a id="msg_num" href="javascript:show_msglist();">4</a></p>
                 <!-- <p class="pull-left badge"><a href="#" data-toggle="modal" data-target="#messages" >4</a></p> -->
-                <p class="pull-left badge"><a id="msg_num" href="javascript:show_msglist();">4</a></p>
+                
                 <!-- <div class="modal fade" id="messages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -347,8 +345,10 @@
                   </div>
                 </div>
                 <div class="hidden" id="s-part3">
-                <label>输入要搜索的课程信息：</label><input type="text"/>
-                <input type="submit"/>
+                <div class="input-group">
+                <input type="text" class="form-control" placeholder="输入要搜索的课程信息" style="width:500px;margin-top:20px;" />
+                </div>
+                <button type="submit" class="btn btn-success">搜索</button>
                 </div>
               </div>
               <!--我的课程 Body End-->
@@ -600,31 +600,59 @@
               <!--我的关注 Body End-->
             </div>
             <!--我的关注 Start-->
+
             <!--消息列表 Start-->
             <div id="messages" class="col-xs-12 hidden">
               <!--消息列表 Head Start-->
-              <div class="col-xs-12">
+              <div class="col-xs-12 marg_btm">
                 <ul class="nav pull-left bigger_menu">
                   <li id="msg_list">消息列表</li>
                 </ul>
               </div>
               <!--消息列表 Head End-->
-              <ul>
-                <li>
-                  <a href="#">李楠回复了你</a>
-                </li>
-                <li>
-                  <a href="#">李楠回复了你</a>
-                </li>
-                <li>
-                  <a href="#">李楠回复了你</a>
-                </li>
-                <li>
-                  <a href="#">李楠回复了你</a>
-                </li>
-              </ul>
+              <!--消息列表 Body Start-->
+              <div class="row">
+                <div class="col-sm-1 center">
+                  <img src="img/user.png" alt="课程" class="user-img">
+                  <p>Amy</p>
+                </div>
+                <div class="col-sm-11 board-content">
+                  <div>科目：<a href="#" >JavaScript</a></div>
+                  <div>我的问题：navbarsdropdown下拉菜单怎么实现</div>
+                  <div>回复我： 这个很简单</div>
+                  <a class="pull-right" data-toggle="modal" href="#response">回复</a>
+                </div> 
+              </div>
+              <div class="row">
+                <div class="col-sm-1 center">
+                  <img src="img/user.png" alt="课程" class="user-img">
+                  <p>Amy</p>
+                </div>
+                <div class="col-sm-11 board-content">
+                <div>科目：<a href="#" >JavaScript</a></div>
+                <div>我的问题：  navbarsdropdown下拉菜单用js怎么写</div>   
+                <div>回复我： 嗯～～，这个提问大家都在考虑...</div>
+                <a class="pull-right" data-toggle="modal" href="#response">回复</a>
+                </div> 
+              </div>
+              <!--消息列表 Body End-->
             </div>
             <!--消息列表 End-->
+
+            <!--生成简历 Start-->
+            <div id="resume" class="col-xs-12 hidden">
+              <!--生成简历 Head Start-->
+              <div class="col-xs-12 marg_btm">
+                <ul class="nav pull-left bigger_menu">
+                  <li id="msg_list">生成简历</li>
+                </ul>
+              </div>
+              <!--生成简历 Head End-->
+              <!--生成简历 Body Start-->
+
+              <!--生成简历 Body End-->
+            </div>
+            <!--生成简历 End-->
           </div>
         </div>
         <!--Right End-->
@@ -639,5 +667,27 @@
       </div>
     </div>
     <!--Footer End-->
+    <div class="modal fade" id="response" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                     回复
+              </h4>
+            </div>
+            <div class="modal-body">
+              <textarea style="width:100%;min-height:100px;"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+              </button>
+              <button type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
