@@ -156,3 +156,6 @@ a.anchor:before {
 .redbg{
 color: red;
 }
+a:target{
+    padding-top: 100px;
+  }

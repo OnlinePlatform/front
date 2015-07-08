@@ -30,4 +30,17 @@ function getElementByClassName(class_name){
       document.getElementById("popWindow").style.display="none";
       document.getElementById("update_text").style.display="none";
     }
-    
+    function show_msglist(){
+      document.getElementById("course").classList.remove("s-chosen");
+      document.getElementById("course").classList.add("hidden");
+      document.getElementById("messages").classList.remove("hidden");
+      var left_a=document.getElementById("left_nav").getElementsByTagName("a");
+      for (var i = 0; i < left_a.length; i++) {
+        if (left_a[i].getAttribute("href")=="#course") {
+          left_a[i].classList.remove("s-chosen");
+        }
+        if(left_a[i].getAttribute("href")=="#messages"){
+          left_a[i].classList.add("s-chosen");
+        }
+      };
+    }
