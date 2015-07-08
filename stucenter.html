@@ -36,7 +36,60 @@
         }
       };
     }
-    </script>
+    $(document).ready(function(){
+      showLocation();
+      //未添加简历信息时
+      $('#resume>p').css({"background-color":"rgba(238, 238, 238, 0.39)","padding":"10px"}); 
+      $('#resume>div').addClass('resume-detail');
+      $('#resume>div').each(function(e){
+        if(!$(this).text()){
+          $(this).html("<p class='info'>您还未添加内容</p>");
+        }
+      });
+      //必填内容为空时提醒
+      function info(){
+        $('.redfont').remove();
+        $('.in .redbg').each(function(e){
+          if(!$(this).parent().siblings().children().val())
+            {
+              $(this).parent().parent().append("<span class='col-sm-2 redfont'>该项不能为空</span>");
+              return false;
+            }    
+        });
+      }
+      $("#saveBasic").click(function(){
+        info();
+        if(!$('span').hasClass('redfont')){
+           $.ajax({
+          type: "POST",
+          url: "process.php", //process to mail
+          data: $('#basic').serialize(),
+          success: function(msg){
+              $("#basic").modal('hide'); //hide popup  
+          },
+          error: function(){
+              alert("failure");
+          }
+        });
+        }
+       
+      });
+      $("#saveContact").click(function(){
+          info();
+          $.ajax({
+          type: "POST",
+          url: "process.php", //process to mail
+          data: $('#concat').serialize(),
+          success: function(msg){
+              $("#contact").modal('hide'); //hide popup  
+          },
+          error: function(){
+              alert("failure");
+          }
+        });        
+      });
+    });
+  </script>
 <style type="text/css">
   a:target{
     padding-top: 100px;
@@ -345,10 +398,10 @@
                   </div>
                 </div>
                 <div class="hidden" id="s-part3">
-                <div class="input-group">
-                <input type="text" class="form-control" placeholder="输入要搜索的课程信息" style="width:500px;margin-top:20px;" />
-                </div>
-                <button type="submit" class="btn btn-success">搜索</button>
+                  <div class="form-inline"style="margin-top:20px;">
+                    <input type="text" class="form-control" placeholder="输入要搜索的课程信息" style="width:500px;" />
+                    <button type="submit" class="btn btn-success">搜索</button>
+                  </div>
                 </div>
               </div>
               <!--我的课程 Body End-->
@@ -642,14 +695,784 @@
             <!--生成简历 Start-->
             <div id="resume" class="col-xs-12 hidden">
               <!--生成简历 Head Start-->
-              <div class="col-xs-12 marg_btm">
+              <!-- <div class="col-xs-12 marg_btm"> -->
                 <ul class="nav pull-left bigger_menu">
                   <li id="msg_list">生成简历</li>
                 </ul>
-              </div>
+              <!-- </div> -->
               <!--生成简历 Head End-->
               <!--生成简历 Body Start-->
+              <!--  4部分内容   -->
+         <!-- s-part1 -->
+          <div>
 
+<!-- 我的简历
+ -->
+            <div class="row" id="s-part1">
+              <div class="col-sm-12">  
+                <div>
+                  <form class="form-horizontal" id="resume">  
+                    <p>基本信息 <a href="#basic" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div class="form-group">
+                      <p class="col-sm-2">姓名：hello</p>
+                      <p class="col-sm-2">居住地：北京</p>
+                    </div>                
+                    <p>联系方式 <a href="#contact" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div class="form-group">
+                      <p>电话：11122354365</p>
+                      <p>邮箱：12333@ss.com</p>
+                    </div>  
+                    <p>教育经历 <a href="#educate" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div>
+                      <table class="table">
+                        <thead>
+                          <th>毕业学校</th>
+                          <th>就读时间</th>
+                          <th>专业</th>
+                          <th></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>北邮</td>
+                            <td>2012-09至2015-07</td>
+                            <td>信息安全</td>
+                            <td><a href="#educate"  data-toggle='modal'>编辑</a>&nbsp;<a href="#">删除</a></td>
+                          </tr>
+                        </tbody>                   
+                      </table>
+                    </div>
+                    <p>语言能力 <a href="#language" data-toggle='modal'><span class="glyphicon glyphicon-plus"></a></span></p>
+                    <div>
+                      <table class="table">
+                        <thead>
+                          <th>语言</th>
+                          <th>听说</th>
+                          <th>读写</th>
+                          <th>等级考试</th>
+                          <th></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>北邮</td>
+                            <td>2012-09至2015-07</td>
+                            <td>信息安全</td>
+                            <td>CET-6(530)</td>
+                            <td><a href="#educate"  data-toggle='modal'>编辑</a>&nbsp;<a href="#">删除</a></td>
+                          </tr>
+                        </tbody>                   
+                      </table>
+                    </div>
+                    <p>证书 <a href="#certificate" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div class="form-group"><span>英语4级，英语6级</span></div>
+                    <p>IT技能 <a href="#talent" data-toggle='modal'><span class="glyphicon glyphicon-plus"></a></span></p>
+                    <div class="form-group">
+                      <p class="col-sm-1">精通：</p>
+                      <p class="col-sm-11">C++</p>
+                      <p class="col-sm-1">熟悉：</p>
+                      <p class="col-sm-11">C++</p>
+                      <p class="col-sm-1">了解：</p>
+                      <p class="col-sm-11">C++</p>
+                    </div>
+                    <p>校内职务 <a href="#jobIn" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div>
+                      <table class="table">
+                        <thead>
+                          <th>职务</th>
+                          <th>时间</th>
+                          <th>学校</th>
+                          <th></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>北邮</td>
+                            <td>2012-09至2015-07</td>
+                            <td>CET-6(530)</td>
+                            <td><a href="#educate"  data-toggle='modal'>编辑</a>&nbsp;<a href="#">删除</a></td>
+                          </tr>
+                        </tbody>                   
+                      </table>
+                    </div>
+                    <p>奖励 <a href="#award" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div>
+                      <table class="table">
+                        <thead>
+                          <th>奖项名称</th>
+                          <th>时间</th>
+                          <th></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>2012-09至2015-07</td>
+                            <td>CET-6(530)</td>
+                            <td><a href="#educate"  data-toggle='modal'>编辑</a>&nbsp;<a href="#">删除</a></td>
+                          </tr>
+                        </tbody>                   
+                      </table>
+                    </div>
+                    <p>实习经历 <a href="#experience" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div>
+                      <table class="table">
+                        <thead>
+                          <th>公司名称：</th>
+                          <th>实习时间</th>
+                          <th>职务</th>
+                          <th>工作描述</th>
+                          <th></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>北邮</td>
+                            <td>2012-09至2015-07</td>
+                            <td>信息安全</td>
+                            <td>CET-6(530)</td>
+                            <td><a href="#educate"  data-toggle='modal'>编辑</a>&nbsp;<a href="#">删除</a></td>
+                          </tr>
+                        </tbody>                   
+                      </table>
+                    </div>
+                    <p>工作经历 <a href="#work" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div>
+                      <table class="table">
+                        <thead>
+                          <th>公司名称：</th>
+                          <th>工作时间</th>
+                          <th>职务</th>
+                          <th>工作描述</th>
+                          <th></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>北邮</td>
+                            <td>2012-09至2015-07</td>
+                            <td>信息安全</td>
+                            <td>CET-6(530)</td>
+                            <td><a href="#educate"  data-toggle='modal'>编辑</a>&nbsp;<a href="#">删除</a></td>
+                          </tr>
+                        </tbody>                   
+                      </table>
+                    </div>
+                    <p>项目经历 <a href="#project" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div>
+                      <table class="table">
+                        <thead>
+                          <th>项目名称：</th>
+                          <th>时间</th>
+                          <th>角色</th>
+                          <th>项目描述</th>
+                          <th></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>北邮</td>
+                            <td>2012-09至2015-07</td>
+                            <td>信息安全</td>
+                            <td>CET-6(530)</td>
+                            <td><a href="#educate"  data-toggle='modal'>编辑</a>&nbsp;<a href="#">删除</a></td>
+                          </tr>
+                        </tbody>                   
+                      </table>
+                    </div>
+                    <p>其他信息 <a href="#other" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div class="form-group">
+                      <p class="col-sm-1">爱好：</p>
+                      <p class="col-sm-9">摄影</p>
+                    </div>
+                    <p>附件 <a href="#append" data-toggle='modal'><span class="glyphicon glyphicon-plus"></span></a></p>
+                    <div>
+                      <!-- <table class="table">
+                        <thead>
+                          <th>文件名称</th>
+                          <th></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>北邮</td>
+                            <td><a href="#educate"  data-toggle='modal'>编辑</a>&nbsp;<a href="#">删除</a></td>
+                          </tr>
+                        </tbody>                   
+                      </table> -->
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+            <!-- 基本信息 -->
+            <div class="modal fade" id="basic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>基本信息</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"><span class='glyphicon glyphicon-asterisk redbg'></span> 姓名：</label>
+                          <div class="col-sm-3">
+                            <input type="email" class="form-control" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">性别：</label>
+                          <label class="radio-inline">
+                            <input type="radio" value="boy"> 男
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio"  value="girl"> 女
+                          </label>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"><span class='glyphicon glyphicon-asterisk redbg'></span> 现居地：</label>
+                          <div class="col-sm-6 form-inline">
+                            <select class="form-control" id="loc_province" required> </select>
+                            <select class="form-control" id="loc_city" required> </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">户口地：</label>
+                          <div class="col-sm-6 form-inline">
+                            <select class="form-control" required id="census_province">
+                            </select>
+                            <select class="form-control" required id="census_city">
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"><span class='glyphicon glyphicon-asterisk redbg'></span>出生日期：</label>
+                          <div class="col-sm-4 form-inline">
+                            <input type="date" class="form-control" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">政治面貌：</label>
+                          <label class="radio-inline">
+                            <input type="radio" value="party"> 党员
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio"  value="member"> 团员
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" value="public">群众
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio"  value="otherparty"> 其他党派
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio"  value="others"> 其他
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="submit" class="btn btn-primary" id="saveBasic">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 联系方式 -->
+            <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>联系方式</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"><span class='glyphicon glyphicon-asterisk redbg'></span> 手机：</label>
+                          <div class="col-sm-5">
+                            <input type="tel" class="form-control" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"><span class='glyphicon glyphicon-asterisk redbg'></span> 邮箱：</label>
+                          <div class="col-sm-5">
+                            <input type="email" class="form-control" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">通信地址：</label>
+                          <div class="col-sm-5">
+                            <input type="address" class="form-control" required>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary" id="saveContact">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 教育 -->
+            <div class="modal fade" id="educate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                      <h4 class="modal-title">教育经历</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">
+                        <div class="form-group">
+                          <label for="name" class="col-sm-2 control-label">学校名称：</label>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="name" class="col-sm-2 control-label">专业：</label>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">学位：</label>
+                          <div class="col-sm-4">
+                            <select class="form-control">
+                              <option>请选择</option>
+                              <option>学士</option>
+                              <option>双学士</option>
+                              <option>硕士</option>
+                              <option>MBA</option>
+                              <option>博士</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">名次：</label>
+                          <div class="col-sm-4">
+                            <select class="form-control">
+                              <option>请选择</option>
+                              <option>5%</option>
+                              <option>10%</option>
+                              <option>15%</option>
+                              <option>20%</option>
+                              <option>30%</option>
+                              <option>其他</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="begin" class="col-sm-2 control-label">时间：</label>
+                          <div class="col-sm-4">
+                            <input type="date" class="form-control" id="begin" placeholder="2012-01-01">
+                          </div>
+                          <label for="end" class="col-sm-1 control-label" style="text-align:center">至</label>
+                          <div class="col-sm-4">
+                            <input type="date" class="form-control" id="begin" placeholder="2013-01-01">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="detail" class="col-sm-2 control-label">主要课程：</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" rows="3" id="detail"></textarea>
+                          </div>
+                        </div> 
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 语言 -->
+            <div class="modal fade" id="language" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>语言</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">语言：</label>
+                          <div class="col-sm-2">
+                            <input type="text" class="form-control ">
+                          </div>                        
+                          <label class="col-sm-2 control-label">听说：</label>
+                          <div class="col-sm-2">
+                            <select class="form-control col-sm-2"><option>精通</option><option>良好</option></select>
+                          </div>
+                          <label class="col-sm-2 control-label">读写：</label>
+                          <div class="col-sm-2">
+                             <select class="form-control col-sm-2"><option>精通</option><option>良好</option></select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">等级考试：</label>
+                          <div class="col-sm-2">
+                            <input type="text" class="form-control ">
+                          </div>
+                          <label class="col-sm-2 control-label">分数:</label>
+                          <div class="col-sm-2">
+                            <input type="text" class="form-control ">
+                          </div>
+                          <div class="col-sm-3 col-sm-offset-1">
+                            <button id="addLang" class="control-label btn btn-success"  title="添加等级考试"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 证书 -->
+            <div class="modal fade" id="certificate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>证书</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">证书：</label>
+                          <div class="col-sm-10">
+                            <input type="text" placeholder="例：英语四级，英语六级" class="form-control ">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 技能 -->
+            <div class="modal fade" id="talent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>IT技能</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">精通：</label>
+                          <div class="col-sm-10">
+                            <input type="text" placeholder="例：英语四级，英语六级" class="form-control ">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">熟悉：</label>
+                          <div class="col-sm-10">
+                            <input type="text" placeholder="例：英语四级，英语六级" class="form-control ">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">了解：</label>
+                          <div class="col-sm-10">
+                            <input type="text" placeholder="例：英语四级，英语六级" class="form-control ">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 校内职务 -->
+            <div class="modal fade" id="jobIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>校内职务</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">职务名称：</label>
+                          <div class="col-sm-2">
+                            <input type="text" class="form-control ">
+                          </div>                        
+                        </div>
+                       <div class="form-group">
+                          <label for="begin" class="col-sm-2 control-label">时间：</label>
+                          <div class="col-sm-4">
+                            <input type="date" class="form-control" id="begin" placeholder="2012-01-01">
+                          </div>
+                          <label  class="col-sm-1 control-label" style="text-align:center">至</label>
+                          <div class="col-sm-4">
+                            <input type="date" class="form-control" id="begin" placeholder="2013-01-01">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">职责：</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" rows="3" id="detail"></textarea>
+                          </div> 
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 实习 -->
+            <div class="modal fade" id="experience" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>实习经历</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">公司名称：</label>
+                          <div class="col-sm-5">
+                            <input type="text" class="form-control ">
+                          </div>                        
+                        </div>
+                       <div class="form-group">
+                          <label for="begin" class="col-sm-2 control-label">实习时间：</label>
+                          <div class="col-sm-4">
+                            <input type="date" class="form-control" id="begin" placeholder="2012-01-01">
+                          </div>
+                          <label  class="col-sm-1 control-label" style="text-align:center">至</label>
+                          <div class="col-sm-4">
+                            <input type="date" class="form-control" id="begin" placeholder="2013-01-01">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">职务：</label>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control ">
+                          </div>                        
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">工作描述：</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" rows="7"></textarea>
+                          </div>                        
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 工作经历 -->
+            <div class="modal fade" id="work" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>工作经历</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">公司名称：</label>
+                          <div class="col-sm-5">
+                            <input type="text" class="form-control ">
+                          </div>                        
+                        </div>
+                       <div class="form-group">
+                          <label for="begin" class="col-sm-2 control-label">工作时间：</label>
+                          <div class="col-sm-4">
+                            <input type="date" class="form-control" id="begin" placeholder="2012-01-01">
+                          </div>
+                          <label  class="col-sm-1 control-label" style="text-align:center">至</label>
+                          <div class="col-sm-4">
+                            <input type="date" class="form-control" id="begin" placeholder="2013-01-01">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">职务：</label>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control ">
+                          </div>                        
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">工作描述：</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" rows="7"></textarea>
+                          </div>                        
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 项目经历 -->
+            <div class="modal fade" id="project" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>项目经历</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">项目名称：</label>
+                          <div class="col-sm-2">
+                            <input type="text" class="form-control ">
+                          </div>                        
+                        </div>
+                        <div class="form-group">
+                          <label for="begin" class="col-sm-2 control-label">时间：</label>
+                          <div class="col-sm-4">
+                            <input type="date" class="form-control" id="begin" placeholder="2012-01-01">
+                          </div>
+                        </div> 
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">项目角色：</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control">
+                          </div> 
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">项目描述：</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" rows="4"></textarea>
+                          </div> 
+                        </div> 
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">项目职责：</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" rows="7"></textarea>
+                          </div> 
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 其他信息 -->
+            <div class="modal fade" id="other" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>其他信息</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">标题：</label>
+                          <div class="col-sm-2">
+                            <select class="form-control">
+                            <option>请选择</option>
+                              <option>兴趣爱好</option>
+                              <option>自我评价</option>
+                              <option>特长</option>
+                            </select>
+                          </div>                        
+                        </div>
+                       <div class="form-group">
+                          <label for="begin" class="col-sm-2 control-label">内容：</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" rows="8"></textarea>
+                          </div>
+                        </div> 
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- 附件 -->
+            <div class="modal fade" id="append" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times; </button>
+                  <p>简历</p>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">            
+                        <div class="form-group">
+                          <label class="control-label col-sm-2">电子简历:</label>
+                          <div class="col-sm-6">
+                            <input type="file" class="form-control">
+                          </div> 
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">上传</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
               <!--生成简历 Body End-->
             </div>
             <!--生成简历 End-->

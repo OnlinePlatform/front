@@ -138,3 +138,21 @@ a.anchor:before {
   border-radius: 10px;
   background-color: #d0d6d9;
 }
+.form-control{
+  display: inline-block;
+}
+/*新添加的样式*/
+.resume-detail{
+  border: 1px solid #eee;
+  min-height: 100px;
+  padding: 10px;
+}
+.info{
+  text-align: center;
+  font-size: 20px;
+  color: #999;
+  margin-top: 29px;
+}
+.redbg{
+color: red;
+}
