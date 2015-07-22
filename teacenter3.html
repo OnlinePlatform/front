@@ -36,11 +36,7 @@
         }
       };
     }
-    window.onload=function(){showLocation();};
-    /*$(document).ready(function() {
-      showLocation();
-    });
-*/</script>
+</script>
 <style type="text/css">
   a:target{
     padding-top: 100px;
@@ -202,7 +198,6 @@
               <li class=""><a href="#mycourse"class=""><span>课程管理</span></a></li>
               <li class=""><a href="#coresearch"class=""><span>科研合作</span></a></li>
               <li class=""><a href="#mystudent"class=""><span>学生管理</span></a></li>
-              
             </ul>
           </div>
           <!--导航 End-->
@@ -294,42 +289,18 @@
               <!--课程管理 Body Start-->
             <div class="col-xs-12 col-sm-12">               
               <div class="">
-                <div class="col-xs-12 col-sm-12">
+                {foreach from=$courses item=course name=loop1}
                 <div class="col-sm-4 col-md-3">
                   <div class="thumbnail">
                     <div class="caption">
-                      <a href="#"> <h4> Python </h4> </a>
-                      <p> 课程码：A1243 </p>                   
-                      <p> <a href="#" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
+                      <a href="#"> <h4> {$course['name']} </h4> </a>
+                      <p> 课程码：{$course['code']} </p>                   
+                      <p> <a href="course_info.php?course_id={$course['id']}&usertype={$usertype}" class="btn-sm btn-info" role="查看详情"> 查看详情 </a> </p>
                     </div>
                   </div>
                 </div>
-                </div>
-                                          <div class="row center">
-              <nav>
-          <ul class="pagination">
-            <li>
-              <a href="#" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-              </a>
-            </li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-            <a href="#" aria-label="Next">
-               <span aria-hidden="true">»</span>
-            </a>
-           </li>
-          </ul>
-        </nav>
-            </div>
-            
+                {/foreach}            
               </div>
-
-
             </div>
               <!--课程管理 Body End-->
           </div>
@@ -371,8 +342,7 @@
               <!--科研合作 Body Start-->
             <div class="col-xs-12 col-sm-12">
                 <!--已完成项目 Body Start-->
-            <div id="my_program" >
-              <div class="col-xs-12 col-sm-12">
+            <div id="my_program">
               <div class="col-sm-4 col-md-3">
                 <div class="thumbnail">
                   <div class="caption">
@@ -383,38 +353,10 @@
                 </div>
               </div>
             </div>
-            <div class="row center">
-              <nav>
-          <ul class="pagination">
-            <li>
-              <a href="#" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-              </a>
-            </li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-            <a href="#" aria-label="Next">
-               <span aria-hidden="true">»</span>
-            </a>
-           </li>
-          </ul>
-        </nav>
-            </div>
-
-
-            </div>
-
-
-
                 <!--已完成项目 Body End-->
 
                 <!--进行中的项目 Body Start-->
             <div id="my_programing" class="hidden">
-              <div class="col-xs-12 col-sm-12">
               <div class="col-sm-4 col-md-3">
                 <div class="thumbnail">
                   <div class="caption">
@@ -425,33 +367,9 @@
                 </div>
               </div>
             </div>
-                        <div class="row center">
-              <nav>
-          <ul class="pagination">
-            <li>
-              <a href="#" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-              </a>
-            </li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-            <a href="#" aria-label="Next">
-               <span aria-hidden="true">»</span>
-            </a>
-           </li>
-          </ul>
-        </nav>
-            </div>
-
-            </div>
                 <!--进行中的项目 Body End-->
 
           </div>
-
               <!--科研合作 Body End-->
         </div>          
               <!--科研合作 End-->
@@ -479,7 +397,11 @@
               <!--学生管理 Head End-->
               <!--学生管理 Body Start-->
           <div class="col-xs-12 col-sm-12">
-            <div class="modal fade" id="lookover_stu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+            <div class="">
+              {foreach from=$courses item=course name=loop2}
+                
+            <div class="modal fade" id={"lookover_stu"|cat:$course['id']} tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -501,18 +423,16 @@
                         <th>操作</th>
                       </thead>
                       <tbody>
+                        {foreach from=$stu_infos item=stu_info name=loop3}
+                        {if $stu_info['course_id'] eq $course['id']}
                         <tr>
-                          <td><input type="checkbox" value="" name=""></td>
-                          <td>002</td>
-                          <td>sanli</td>
-                          <td><a href="#">delete</a></td>
+                          <td><input type="checkbox"></td>
+                          <td>{$stu_info['sno']}</td>
+                          <td>{$stu_info['student_name']}</td>
+                          <td><a href="stu_course_manage.php?action=delete&course_id={$course['id']}&student_id={$stu_info['student_id']}">delete</a></td>
                         </tr>
-                        <tr>
-                          <td><input type="checkbox" value="" name=""></td>
-                          <td>098</td>
-                          <td>marky</td>
-                          <td><a href="#">delete</a></td>
-                        </tr>
+                        {/if}
+                        {/foreach}
                       </tbody>
                     </table>
                   </div>
@@ -528,7 +448,7 @@
               </div>
             </div>
 
-            <div class="modal fade" id="addstu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id={"addstu"|cat:$course['id']} tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -542,62 +462,41 @@
                               Close
                             </span>
                           </button>
-                          <form>
+                          <form action="stu_course_manage.php?action=add&course_id={$course['id']}" method='post'>
                             <div class="form-group">
-                              <label class="labl">姓名：</label><input type="text" id="stu_name">
+                              <label class="labl">姓名：</label><input type="text" id="stu_name" name='name'>
                             </div>
                             <div class="form-group">
-                              <label class="labl">学号：</label><input type="text" id="stu_id">
+                              <label class="labl">学号：</label><input type="text" id="stu_id" name='sno'>
+                            </div>
+                            <div class="modal-footer">
+                              <input type="submit" class="btn btn-success" value="添加"/>
+                              <a href="#" class="btn" data-dismiss="modal">
+                                关闭
+                              </a>
                             </div>
                           </form>
                     </div>
-                    <div class="modal-footer">
-                          <a href="#" class="btn btn-success">
-                            添加
-                          </a>
-                          <a href="#" class="btn" data-dismiss="modal">
-                            关闭
-                          </a>
-                        </div>
+
                   </div>
                 </div>
             </div>
-            <div class="">
               <div class="col-sm-4 col-md-3">
                 <div class="thumbnail">
                   <div class="caption">
-                    <a href="#"> <h4> Python </h4> </a>
-                    <p> 课程码：A1243 </p>
+                    <a href="#"> <h4> {$course['name']} </h4> </a>
+                    <p> 课程码：{$course['code']} </p>
                     <p> 
-                          <a href="#" data-toggle="modal" data-target="#lookover_stu" class="btn-sm btn-info" role="查看学生">查看学生</a>
-                          <a href="#" data-toggle="modal" data-target="#addstu" class="btn-sm btn-info" role="添加学生">添加学生</a> 
+                          <a href="#" data-toggle="modal" data-target="#{'lookover_stu'|cat:$course['id']}" class="btn-sm btn-info" role="查看学生">查看学生</a>
+                          <a href="#" data-toggle="modal" data-target="#{'addstu'|cat:$course['id']}" class="btn-sm btn-info" role="添加学生">添加学生</a> 
                     </p>      
                   </div>
                 </div>
-              </div>       
+              </div>  
+                
+              {/foreach}    
             </div>     
           </div>
-          <div class="row center">
-              <nav>
-          <ul class="pagination">
-            <li>
-              <a href="#" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-              </a>
-            </li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-            <a href="#" aria-label="Next">
-               <span aria-hidden="true">»</span>
-            </a>
-           </li>
-          </ul>
-        </nav>
-            </div>
               <!--学生管理 Body End-->
         </div>
             <!--学生管理 End-->

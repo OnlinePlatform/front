@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico">-->
+    <title>
+      添加课程
+    </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/individual_center.css" rel="stylesheet">
+  </head>
+  <script src="js/individual_center.js"></script>
+  <script type="text/javascript" src="js/area.js"></script>
+  <script type="text/javascript" src="js/location.js"></script>
+  <script src="js/jquery-1.11.1.js"> </script>
+  <script src="js/bootstrap.min.js"> </script>
+  <script src="js/common.js"> </script>
+  <script type="text/javascript">
+  function show_msglist(){
+      document.getElementById("course").classList.remove("s-chosen");
+      document.getElementById("course").classList.add("hidden");
+      document.getElementById("messages").classList.remove("hidden");
+      var left_a=document.getElementById("left_nav").getElementsByTagName("a");
+      for (var i = 0; i < left_a.length; i++) {
+        if (left_a[i].getAttribute("href")=="#course") {
+          left_a[i].classList.remove("s-chosen");
+        }
+        if(left_a[i].getAttribute("href")=="#messages"){
+          left_a[i].classList.add("s-chosen");
+        }
+      };
+    }
+    window.onload=function(){showLocation();};
+    /*$(document).ready(function() {
+      showLocation();
+    });
+*/</script>
+<style type="text/css">
+  a:target{
+    padding-top: 100px;
+  }
+</style>
+  <body>
+    <!--Navigator Start-->
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="collapse navbar-collapse pull-left">
+          <ul class="nav navbar-nav">
+            <li> <a href="#" class="active"> 首页 </a> </li>
+            <li> <a href="#"> 教学实验 </a> </li>
+            <li> <a href="#"> 科研合作 </a> </li>
+            <li> <a href="#"> 就业实习 </a> </li>
+            <li> <a href="#"> 关于我们 </a> </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li> <a href="#"> 注册 </a> </li>
+            <li> <a href="#"> 登录 </a> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Navigator End-->
+    <div class="container">
+      <!--个人中心Body Start-->
+      <div id="indiv_center">
+        <!-- Left Start -->
+        <div class="col-xs-2 col-sm-2">
+          <!--个人资料 Start-->
+          <div class="col-xs-12 layout  marg_btm">
+            <div class="col-xs-1"> </div>
+            <!--编辑个人资料 Start-->
+            <div class="modal fade" id="edit_material" tabindex="-1" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                      <span aria-hidden="true">
+                      </span>
+                      <span class="sr-only">
+                        Close
+                      </span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                      编辑个人资料
+                    </h4>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label class="labl" for="nickname">
+                          昵 称：
+                        </label>
+                        <input type="text" id="nickname" class="" />
+                      </div>
+                      <div class="form-group">
+                        <label class="labl" for="gender">
+                          性 别：
+                        </label>
+                        <input type="radio" id="male" name="gender">
+                        <label  for="male">
+                          男
+                        </label>
+                        <input type="radio" id="female" name="gender">
+                        <label  for="female">
+                          女
+                        </label>
+                        <input type="radio" id="secret" name="gender">
+                        <label  for="secret">
+                          保密
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="labl" for="addr">
+                          所 在 地：
+                        </label>
+                        <div id="addr">
+                          <select id="loc_province" style="width:80px; "> </select>
+                          <select id="loc_city" style="width:80px; "> </select>
+                          <select id="loc_town" style="width:80px; "> </select>
+                          <input type="hidden" name="location_id" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="labl" for="position">
+                          职 位：
+                        </label>
+                        <input type="text" id="position" class="" />
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="labl" for="school">
+                          学 校：
+                        </label>
+                        <input type="text" id="school" class="" />
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="labl" for="email">
+                          邮 箱：
+                        </label>
+                        <input type="email" id="email" class="" />
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="indiv_sig">
+                          个 性 签 名：
+                        </label>
+                        <textarea id="indiv_sig" placeholder="我的个性签名" class="form-control">
+                        </textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class='modal-footer'>
+                    <a href='#' class='btn btn-success'>
+                      保存
+                    </a>
+                    <a href='#' class='btn' data-dismiss='modal'>
+                      关闭
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--编辑个人资料 End-->
+
+            <div class="col-xs-4 portrait" onmouseover="show_mask(); " onmouseout="hide_mask(); ">
+              <div class="popWindow" id="popWindow" style="display:none; "> </div> 
+              <div class="update_text" id="update_text" style="display:none; ">
+                <a href="#" style="cursor:pointer; ">
+                  <input type="file" name="" id="" accept="image/png,image/gif,image/jpeg">
+                  更改头像
+                </a>
+              </div>
+              <img src="img/portrait.jpg" />
+            </div>
+            <div class="pull-right">
+            <ul class="navbar-text nav ">
+              <li><span id="nickname" style="font:20px/1.5 微软雅黑;font-weight:bold;"> 小王子 </span> </li>
+              <li><span class="position"> 开发工程师 </span> </li>
+            </ul>
+              <a href="#" class="opt_ico" data-toggle="modal" data-target="#edit_material">
+                <span class="glyphicon glyphicon-edit " aria-hidden="true">
+                </span>
+              </a>
+            </div>
+            <ul class="navbar-text nav">
+            <li><span class="indiv_sig"> 既然选择了远方，就只顾风雨兼程 </span> </li>
+            </ul>
+          </div>
+          <!--个人资料 End-->
+          <!--导航 Start-->
+          <div id="left_nav">
+            <ul class="nav" id="s-nav">
+              <li class=""><a href="#mycourse"class=""><span>课程管理</span></a></li>
+              <li class=""><a href="#coresearch"class=""><span>科研合作</span></a></li>
+              <li class=""><a href="#mystudent"class=""><span>学生管理</span></a></li>
+              
+            </ul>
+          </div>
+          <!--导航 End-->
+        </div>
+        <!--Left End-->
+        <div class="col-sm-1"></div>
+        <!-- Right Start -->
+        <div>
+          <div class="col-sm-9 col-xs-9">
+            
+              <h1>svn服务器</h1>
+                       
+              <div >
+                
+                <h3 class="s-chapter">第1章 SVN 的下载与安装
+
+                </h3>
+                                
+
+                <ol class="s-section">
+                  <li>
+                    <a href="#">SVN 服务器端的安装和配置</a>
+                   
+                  </li>
+                  <li>
+                    <a href="#">SVN 服务器端的安装和配置</a>
+                    
+                  </li>
+                  <li>
+                    <a href="#">SVN 服务器端的安装和配置</a>
+                    <a href="#" title="播放视频"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></a>
+                    <a href="#" title="查看PPT"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+                  </li>
+                  
+
+                 
+                </ol>
+                                    <div style="background-color:#eee" height="30px"> 添加小节                
+                      <div class="pull-right glyphicon" style="-webkit-margin-before:10px;-webkit-margin-after:10px;color:#31b0d5;padding-left:20px;"><a data-toggle="modal" data-target="#addclass" href="#" title="添加小节">+</a></div>
+                <div class="modal fade" id="addclass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4>添加小节</h4>
+                      </div>
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">
+                          <span aria-hidden="true">
+                          </span>
+                          <span class="sr-only">
+                            Close
+                          </span>
+                        </button>
+                        <form>
+                          <div class="form-group">
+                            <label class="labl">小节名称：</label><input type="text" id="course_name">
+                          </div>                         
+                          <div class="form-group">
+                            <label class="labl">上传课程：</label><input style="display:inline-block" type="file">
+                          </div>
+                        </form>
+                      </div>
+                    <div class="modal-footer">
+                      <a href="#" class="btn btn-success">
+                            保存
+                      </a>
+                      <a href="#" class="btn" data-dismiss="modal">
+                            关闭
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+</div>
+
+
+              </div>
+              <div >
+                <h3 class="s-chapter">第2章 SVN 的下载与安装</h3>
+                <ol class="s-section">
+                  <li>
+                    <a href="#">SVN 服务器端的安装和配置</a>
+                    <a href="#video" data-toggle="modal" title="播放视频"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></a>
+                    <a href="file.html" target="_blank" title="查看PPT"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+                  </li>
+                  <li>
+                    <a href="#">SVN 服务器端的安装和配置</a>
+                    <a href="#" title="播放视频"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></a>
+                    <a href="#" title="查看PPT"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+                  </li>
+                  <li>
+                    <a href="#">SVN 服务器端的安装和配置</a>
+                    <a href="#" title="播放视频"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></a>
+                    <a href="#" title="查看PPT"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+                  </li>
+                </ol>
+                <div style="background-color:#eee"> 添加小节                 
+                      <div class="pull-right glyphicon" style="-webkit-margin-before:10px;-webkit-margin-after:10px;color:#31b0d5;padding-left:20px;"><a data-toggle="modal" data-target="#addclass" href="#" title="添加小节">+</a></div>
+                <div class="modal fade" id="addclass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4>添加小节</h4>
+                      </div>
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">
+                          <span aria-hidden="true">
+                          </span>
+                          <span class="sr-only">
+                            Close
+                          </span>
+                        </button>
+                        <form>
+                          <div class="form-group">
+                            <label class="labl">小节名称：</label><input type="text" id="course_name">
+                          </div>                         
+                          <div class="form-group">
+                            <label class="labl">上传课程：</label><input style="display:inline-block" type="file">
+                          </div>
+                        </form>
+                      </div>
+                    <div class="modal-footer">
+                      <a href="#" class="btn btn-success">
+                            保存
+                      </a>
+                      <a href="#" class="btn" data-dismiss="modal">
+                            关闭
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+</div>
+              </div>
+              <div style="background-color:#eee">添加章节
+               
+                  <div class="pull-right glyphicon" style="-webkit-margin-before:10px;-webkit-margin-after:10px;color:#31b0d5;padding-left:20px;"><a data-toggle="modal" data-target="#addchapter" href="#" title="添加章节">+</a></div>
+                <div class="modal fade" id="addchapter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4>添加章节</h4>
+                      </div>
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">
+                          <span aria-hidden="true">
+                          </span>
+                          <span class="sr-only">
+                            Close
+                          </span>
+                        </button>
+                        <form>
+                          <div class="form-group">
+                            <label class="labl">章节名称：</label><input type="text" id="course_name">
+                          </div>                         
+                          <div class="form-group">
+                            <label class="labl">上传课程：</label><input style="display:inline-block" type="file">
+                          </div>
+                        </form>
+                      </div>
+                    <div class="modal-footer">
+                      <a href="#" class="btn btn-success">
+                            保存
+                      </a>
+                      <a href="#" class="btn" data-dismiss="modal">
+                            关闭
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                                     
+
+
+              </div>
+            </div>    
+          </div>
+        <!--Right End-->
+  </div>
+      <!--教师中心Body End-->
+</div>
+    <!--Footer Start-->
+    <div class="footer">
+      <div class="footer-text">
+        <p> <span> 关于我们 </span> <span> 诚征英才 </span> <span> 联系我们 </span> <span> 服务协议 </span> <span> 京ICP备15011063号 </span> </p>
+        <p> Copyright 2015 GPX All Rights Reserved&nbsp; &nbsp; &nbsp; &nbsp; 极派客公司&nbsp; &nbsp; &nbsp; &nbsp; 版权所有&nbsp; &nbsp; &nbsp; &nbsp; </p>
+      </div>
+    </div>
+    <!--Footer End-->
+  </body>
+</html>
